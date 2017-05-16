@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import classNames from 'classnames';
 import routes from 'routes/routes';
+import 'layout/head/favicons';
 import Nav from 'layout/nav/nav';
 
 export default class Main extends React.Component {

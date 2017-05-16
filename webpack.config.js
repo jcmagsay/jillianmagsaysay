@@ -40,11 +40,17 @@ module.exports = {
         'use': ExtractTextPlugin.extract(
           ['css', 'postcss', 'sass']
         )
+      },
+      {
+        'test': /\.(ico|png)$/,
+        'exclude': /node_modules/,
+        'use': 'file?name=media/images/favicons/[name].[ext]'
       }
     ]
   },
   'resolve': {
     'alias': {
+      'media': path.resolve(__dirname, './src/assets/media'),
       'styles': path.resolve(__dirname, './src/assets/styles'),
       'client': path.resolve(__dirname, './src/client'),
       'components': path.resolve(__dirname, './src/client/components'),
@@ -52,7 +58,7 @@ module.exports = {
       'pages': path.resolve(__dirname, './src/client/pages'),
       'routes': path.resolve(__dirname, './src/routes')
     },
-    'extensions': ['.js', '.json', '.jsx', '.scss']
+    'extensions': ['.js', '.json', '.jsx', '.scss', '.png', '.ico']
   },
   'resolveLoader': {
     'moduleExtensions': ['-loader']
