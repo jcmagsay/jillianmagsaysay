@@ -2,8 +2,9 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import classNames from 'classnames';
 import routes from 'routes/routes';
-import 'layout/head/favicons';
+import Footer from 'layout/footer/footer';
 import Nav from 'layout/nav/nav';
+import 'layout/head/favicons';
 
 export default class Main extends React.Component {
   constructor(props) {
@@ -33,9 +34,7 @@ export default class Main extends React.Component {
               )}
             </Switch>
           </main>
-          <footer>
-            Footer
-          </footer>
+          <Footer />
         </div>
       </Router>
     );

@@ -1,0 +1,25 @@
+/* ------------------------------------
+ HERO STYLES
+--------------------------------------- */
+
+.hero {
+  display: flex;
+}
+
+.hero__avatar,
+.hero__details {
+  height: 45rem;
+  width: 45rem;
+}
+
+.hero__image {
+  height: inherit;
+  width: inherit;
+}
+
+.hero__details {
+  background: $COLOR_DARK;
+  color: $COLOR_LIGHTEST;
+  flex: 1;
+  padding: 0 2.4rem;
+}

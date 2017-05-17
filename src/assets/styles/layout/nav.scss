@@ -1,7 +1,8 @@
 nav {
-  background: $COLOR_DARK;
+  background: $COLOR_DARKEST;
   box-shadow: $DP4;
   color: $COLOR_GRAY;
+  display: flex;
   height: 5rem;
 }
 
@@ -11,11 +12,31 @@ nav {
     height: 100%;
   }
 
-  .nav__listItem {
-    padding: 0 2.4rem;
+  .nav__list-item {
     text-transform: uppercase;
+  }
+
+  .nav__link {
+    display: block;
+    padding: 0 2.4rem;
+    &::after {
+      border-bottom: 0.1rem solid $COLOR_TRANSPARENT;
+      content: '';
+      display: block;
+      opacity: 0;
+      transform: translateY(0);
+      transition: all 0.5s ease;
+    }
+    &:hover::after {
+      border-bottom: 0.1rem solid $COLOR_BLUE;
+      opacity: 1;
+      transform: translateY(0.5rem);
+    }
   }
 
   .nav__link--active {
     color: $COLOR_BLUE;
+    &:hover::after {
+      opacity: 0;
+    }
   }

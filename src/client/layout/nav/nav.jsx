@@ -10,11 +10,18 @@ export default class Nav extends Component {
   render() {
     return (
       <nav className="nav">
+        <NavLink
+          exact
+          className="nav__logo"
+          to="/"
+        >
+          <img src={require('media/images/logo.png')} height="50" />
+        </NavLink>
         <ul className="nav__list">
           {routes.navRoutes.map((route, i) => {
             return (
               <li
-                className="nav__listItem"
+                className="nav__list-item"
                 key={`navlink-${i}`}
               >
                 <NavLink

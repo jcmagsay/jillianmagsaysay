@@ -42,7 +42,7 @@ module.exports = {
         )
       },
       {
-        'test': /\.(ico|png)$/,
+        'test': /\.(ico|jpg|png)$/,
         'exclude': /node_modules/,
         'use': 'file?name=media/images/favicons/[name].[ext]'
       }
@@ -58,7 +58,7 @@ module.exports = {
       'pages': path.resolve(__dirname, './src/client/pages'),
       'routes': path.resolve(__dirname, './src/routes')
     },
-    'extensions': ['.js', '.json', '.jsx', '.scss', '.png', '.ico']
+    'extensions': ['.js', '.json', '.jsx', '.scss', '.jpg', '.png', '.ico']
   },
   'resolveLoader': {
     'moduleExtensions': ['-loader']

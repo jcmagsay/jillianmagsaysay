@@ -1,3 +1,8 @@
 footer {
+  background: $COLOR_DARK;
+  color: $COLOR_LIGHTEST;
+  display: flex;
+  align-items: center;
   min-height: 5rem;
+  padding: 0 2.4rem;
 }

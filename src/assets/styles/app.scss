@@ -19,7 +19,6 @@
 
 @import 'base/elements';
 
-
 /* ------------------------------------
  LAYOUT STYLES
 --------------------------------------- */
@@ -29,3 +28,9 @@
 @import 'layout/main';
 @import 'layout/nav';
 @import 'layout/site';
+
+/* ------------------------------------
+ SMALL SCREEN AND BASE STYLES
+--------------------------------------- */
+
+@import 'screen';
