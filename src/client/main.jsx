@@ -13,13 +13,13 @@ export default class Main extends React.Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className="site">
           <header role="banner">
             <Nav />
           </header>
           <main id="main" role="main">
             <Switch>
-              {routes.map((route, i) =>
+              {routes.all.map((route, i) =>
                 <Route
                   exact
                   key={`route-${i}`}

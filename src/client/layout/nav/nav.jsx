@@ -9,24 +9,27 @@ export default class Nav extends Component {
 
   render() {
     return (
-      <ul className="nav">
-        {routes.map((route, i) => {
-          return (
-            <li
-              key={`navlink-${i}`}
-            >
-              <NavLink
-                exact
-                className="navLink"
-                activeClassName="navLink_active"
-                to={route.path}
+      <nav className="nav">
+        <ul className="nav__list">
+          {routes.navRoutes.map((route, i) => {
+            return (
+              <li
+                className="nav__listItem"
+                key={`navlink-${i}`}
               >
-                {route.name}
-              </NavLink>
-            </li>
-          )
-        })}
-      </ul>
+                <NavLink
+                  exact
+                  className="nav__link"
+                  activeClassName="nav__link--active"
+                  to={route.path}
+                >
+                  {route.name}
+                </NavLink>
+              </li>
+            )
+          })}
+        </ul>
+      </nav>
     );
   }
 }

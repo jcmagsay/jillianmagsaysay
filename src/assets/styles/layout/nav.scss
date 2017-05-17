@@ -1,0 +1,21 @@
+nav {
+  background: $COLOR_DARK;
+  box-shadow: $DP4;
+  color: $COLOR_GRAY;
+  height: 5rem;
+}
+
+  .nav__list {
+    align-items: center;
+    display: flex;
+    height: 100%;
+  }
+
+  .nav__listItem {
+    padding: 0 2.4rem;
+    text-transform: uppercase;
+  }
+
+  .nav__link--active {
+    color: $COLOR_BLUE;
+  }
