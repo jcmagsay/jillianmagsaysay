@@ -7,12 +7,12 @@ export default class Hero extends Component {
   }
 
   render() {
-    const { children, title, supportingText } = this.props;
+    const { children, image, title, supportingText } = this.props;
 
     return (
       <section className="hero">
         <div className="hero__avatar">
-          <img className="hero__image" src={require('media/images/professional.jpg')} />
+          <img className="hero__image" src={image} />
         </div>
         <div className="hero__details">
           <Text
