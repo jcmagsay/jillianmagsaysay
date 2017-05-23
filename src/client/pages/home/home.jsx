@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import Card from 'components/card';
-import Hero from 'components/hero';
+import Page from 'components/page';
 
 export default class Home extends Component {
   constructor () {
     super();
   }
 
-  _renderSupportingText() {
+  _renderHeroSupportingText() {
     return(
       <div>
         I'm a Senior Software Engineer, residing in the Denver Metro Area. I currently work at <a href="https://mondorobot.com/">Mondo Robot</a> in Boulder, CO building BIG, BOLD, and BADASS technology.
@@ -17,17 +17,16 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div>
-        <Hero
-          image={require('media/images/professional.jpg')}
-          title="Hi, I'm Jill"
-          supportingText={this._renderSupportingText()}
-        />
+      <Page
+        heroImage={require('media/images/professional.jpg')}
+        heroTitle="Hi, I'm Jill"
+        heroSupportingTxt={this._renderHeroSupportingText()}
+      >
         <Card
-          title="about"
+          title="About"
           supportingText="bacon ipsum"
         />
-      </div>
+      </Page>
     );
   }
 }

@@ -12,7 +12,9 @@ export default class Card extends Component {
     return (
       <section className="card">
         <div className="card__title">
-          {title}
+          <Text type="title">
+            {title}
+          </Text>
         </div>
         <div className="card__supporting-text">
           {supportingText}

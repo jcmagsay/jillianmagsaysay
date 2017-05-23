@@ -4,16 +4,18 @@
 
 .card {
   box-shadow: $DP4;
+  min-height: 20rem;
   width: 30rem;
 }
 
 .card__title {
-  background: $COLOR_BLUE;
+  background: $COLOR_DARK;
   color: $COLOR_LIGHTEST;
+  padding: 1.6rem;
 }
 
 .card__supporting-text {
-
+  padding: 1.6rem;
 }
 
 .card__actions {

@@ -47,3 +47,15 @@
 .text--display-xl {
   @include text(11.2rem);
 }
+
+/* ------------------------------------
+ TEXT MODIFIERS
+--------------------------------------- */
+
+.text--uppercase {
+  text-transform: uppercase;
+}
+
+.text--centered {
+  text-align: center;
+}
