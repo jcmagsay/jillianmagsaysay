@@ -18,6 +18,7 @@ nav {
 
   .nav__link {
     display: block;
+    font-family: $FONT_POIRET;
     padding: 0 2.4rem;
     &::after {
       border-bottom: 0.1rem solid $COLOR_TRANSPARENT;
