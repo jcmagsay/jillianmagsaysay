@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Page from 'components/page';
 
 export default class Contact extends Component {
   constructor () {
@@ -7,7 +8,12 @@ export default class Contact extends Component {
 
   render() {
     return (
-      <div>Contact</div>
+      <Page
+        heroImage={require('media/images/chomps.png')}
+        heroTitle="Contact"
+        heroSupportingTxt="Want to play? Have a bone to pick?">
+         About section
+      </Page>
     );
   }
 }

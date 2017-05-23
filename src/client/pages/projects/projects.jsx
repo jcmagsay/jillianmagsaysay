@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Page from 'components/page';
 
 export default class Projects extends Component {
   constructor () {
@@ -7,7 +8,13 @@ export default class Projects extends Component {
 
   render() {
     return (
-      <div>Projects</div>
+      <Page
+        heroImage={require('media/images/aesthetics.png')}
+        heroTitle="Street Cred"
+        heroSupportingTxt="Would buttercream be as good without the butter?"
+      >
+         About section
+      </Page>
     );
   }
 }

@@ -18,13 +18,25 @@ export default class Home extends Component {
   render() {
     return (
       <Page
-        heroImage={require('media/images/professional.jpg')}
+        heroImage={require('media/images/professional-color.png')}
         heroTitle="Hi, I'm Jill"
         heroSupportingTxt={this._renderHeroSupportingText()}
       >
         <Card
           title="About"
-          supportingText="bacon ipsum"
+          supportingText="Want to know more about me?"
+        />
+        <Card
+          title="Skills"
+          supportingText="Curious what my strengths are?"
+        />
+        <Card
+          title="Projects"
+          supportingText="Check out some past and upcoming projects"
+        />
+        <Card
+          title="My Idea Bucket"
+          supportingText="I am full of ideas and always solving fun problems with code"
         />
       </Page>
     );
