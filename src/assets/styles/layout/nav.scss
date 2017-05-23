@@ -36,7 +36,9 @@ nav {
 
   .nav__link--active {
     color: $COLOR_BLUE;
-    &:hover::after {
-      opacity: 0;
+    &::after {
+      border-bottom: 0.1rem solid $COLOR_BLUE;
+      opacity: 1;
+      transform: translateY(0.5rem);
     }
   }

@@ -7,11 +7,19 @@ export default class Card extends Component {
   }
 
   render() {
-    const { children, title, supportingText } = this.props;
+    const { actions, children, title, supportingText } = this.props;
 
     return (
       <section className="card">
-        {title}
+        <div className="card__title">
+          {title}
+        </div>
+        <div className="card__supporting-text">
+          {supportingText}
+        </div>
+        <div className="card__actions">
+          {actions}
+        </div>
       </section>
     );
   }

@@ -7,23 +7,25 @@ export default class Home extends Component {
     super();
   }
 
-  _renderMondoLink() {
+  _renderSupportingText() {
     return(
-      <a href="https://mondorobot.com/">Mondo Robot</a>
+      <div>
+        I'm a Senior Software Engineer, residing in the Denver Metro Area. I currently work at <a href="https://mondorobot.com/">Mondo Robot</a> in Boulder, CO building BIG, BOLD, and BADASS technology.
+      </div>
     );
   }
 
   render() {
-    const supportingText = `I'm a Senior Software Engineer, residing in the Denver Metro Area. I currently work at Mondo Robot in Boulder, CO building BIG, BOLD, and BADASS technology.`;
     return (
       <div>
         <Hero
           image={require('media/images/professional.jpg')}
           title="Hi, I'm Jill"
-          supportingText={supportingText}
+          supportingText={this._renderSupportingText()}
         />
         <Card
           title="about"
+          supportingText="bacon ipsum"
         />
       </div>
     );

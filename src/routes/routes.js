@@ -3,6 +3,7 @@ import Home from 'pages/home/home';
 import NotFound from 'pages/not-found/not-found';
 import Projects from 'pages/projects/projects';
 import Resume from 'pages/resume/resume';
+import Contact from 'pages/contact/contact';
 
 const navRoutes = [
   {
@@ -19,6 +20,11 @@ const navRoutes = [
     'path': '/resume',
     'name': 'Resume',
     'component': Resume
+  },
+  {
+    'path': '/contact',
+    'name': 'Contact',
+    'component': Contact
   }
 ];
 
