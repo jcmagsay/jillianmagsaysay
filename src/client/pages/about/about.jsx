@@ -13,7 +13,7 @@ export default class About extends Component {
         heroTitle="Who am I?"
         heroSupportingTxt="Softball player/coach, sports enthusiast, beer lover, amateur chef, mentor, and software engineer"
       >
-         About section
+         Coming soon, please check back soon...
       </Page>
     );
   }

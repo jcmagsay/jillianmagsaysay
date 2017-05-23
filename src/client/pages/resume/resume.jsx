@@ -11,8 +11,9 @@ export default class Resume extends Component {
       <Page
         heroImage={require('media/images/resume.png')}
         heroTitle="Software Engineer"
-        heroSupportingTxt="If you want to be formal">
-         About section
+        heroSupportingTxt="If you want to be formal"
+      >
+        Coming soon, please check back soon...
       </Page>
     );
   }

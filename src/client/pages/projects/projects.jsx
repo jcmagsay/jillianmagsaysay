@@ -13,7 +13,7 @@ export default class Projects extends Component {
         heroTitle="Street Cred"
         heroSupportingTxt="Would buttercream be as good without the butter?"
       >
-         About section
+         Coming soon, please check back soon...
       </Page>
     );
   }
