@@ -1,8 +1,7 @@
 /* ------------------------------------
  TEXT STYLES
 --------------------------------------- */
-
-@mixin text($size, $weight: 300, $lHeight: 1.2) {
+@mixin textMd($size, $weight: 300, $lHeight: 1.2) {
   font-size: $size;
   font-weight: $weight;
   line-height: 1 * 1.7;
@@ -13,39 +12,39 @@
 --------------------------------------- */
 
 .text--caption {
-  @include text(1.3rem);
+  @include textMd(1.3rem);
 }
 
 .text--body {
-  @include text(1.5rem);
+  @include textMd(1.5rem);
 }
 
 .text--subheading {
-  @include text(1.7rem);
+  @include textMd(1.7rem);
 }
 
 .text--title {
-  @include text(2.1rem, 700);
+  @include textMd(2.1rem, 700);
 }
 
 .text--headline {
-  @include text(2.4rem);
+  @include textMd(2.4rem);
 }
 
 .text--display-sm {
-  @include text(3.4rem);
+  @include textMd(3.4rem);
 }
 
 .text--display-md {
-  @include text(4.5rem);
+  @include textMd(4.5rem);
 }
 
 .text--display-lg {
-  @include text(5.6rem);
+  @include textMd(5.6rem);
 }
 
 .text--display-xl {
-  @include text(11.2rem);
+  @include textMd(11.2rem);
 }
 
 /* ------------------------------------

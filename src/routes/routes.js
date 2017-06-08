@@ -1,5 +1,6 @@
 import About from 'pages/about/about';
 import Home from 'pages/home/home';
+import Ideas from 'pages/ideas/ideas';
 import NotFound from 'pages/not-found/not-found';
 import Projects from 'pages/projects/projects';
 import Resume from 'pages/resume/resume';
@@ -20,6 +21,11 @@ const navRoutes = [
     'path': '/resume',
     'name': 'Resume',
     'component': Resume
+  },
+  {
+    'path': '/ideas',
+    'name': 'Ideas',
+    'component': Ideas
   },
   {
     'path': '/contact',
