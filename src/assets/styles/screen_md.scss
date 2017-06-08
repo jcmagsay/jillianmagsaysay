@@ -6,14 +6,9 @@
  LAYOUT
 --------------------------------------- */
 
-@import 'layout/nav/nav';
-@import 'layout/nav-drawer/nav-drawer';
+@import 'layout/nav/nav_md';
+@import 'layout/nav-drawer/nav-drawer_md';
 
 /* ------------------------------------
  COMPONENTS
 --------------------------------------- */
-
-@import 'components/card';
-@import 'components/hero';
-@import 'components/page';
-@import 'components/text';

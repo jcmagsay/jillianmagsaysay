@@ -1,35 +1,34 @@
 import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
-import routes from 'routes/routes';
-import NavDrawer from 'layout/nav/nav-drawer';
 import Icon from 'components/icon';
 
-export default class Nav extends Component {
+export default class NavDrawer extends Component {
   constructor() {
     super();
   }
 
   render() {
+    const { children, routes } = this.props;
     return (
-      <nav className="nav">
+      <section className="nav-drawer">
         <NavLink
           exact
-          className="nav__logo"
+          className="nav-drawer__logo"
           to="/"
         >
-          <img src={require('media/images/logo.png')} height="50" />
+          <img src={require('media/images/logo-lg.png')} height="100" />
         </NavLink>
-        <ul className="nav__list">
+        <ul className="nav-drawer__list">
           {routes.navRoutes.map((route, i) => {
             return (
               <li
-                className="nav__list-item"
+                className="nav-drawer__list-item"
                 key={`navlink-${i}`}
               >
                 <NavLink
                   exact
-                  className="nav__link"
-                  activeClassName="nav__link--active"
+                  className="nav-drawer__link"
+                  activeClassName="nav-drawer__link--active"
                   to={route.path}
                 >
                   {route.name}
@@ -38,13 +37,7 @@ export default class Nav extends Component {
             )
           })}
         </ul>
-        <NavDrawer routes={routes} />
-        <div className="nav__trigger">
-          <button>
-            <Icon type="menu" />
-          </button>
-        </div>
-      </nav>
+      </section>
     );
   }
 }

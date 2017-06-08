@@ -11,6 +11,7 @@
 
 @import 'helpers/colors';
 @import 'helpers/dp';
+@import 'helpers/rhythm';
 @import 'helpers/vars';
 
 /* ------------------------------------
@@ -27,7 +28,6 @@
 @import 'layout/footer';
 @import 'layout/header';
 @import 'layout/main';
-@import 'layout/nav';
 @import 'layout/site';
 
 /* ------------------------------------
@@ -37,5 +37,8 @@
 @import 'screen';
 
 /* ------------------------------------
- DESKTOP
+ MEDIUM SCREEN STYLES
 --------------------------------------- */
+@media only screen and (min-width: $SCREEN_MD) {
+  @import 'SCREEN_MD';
+}

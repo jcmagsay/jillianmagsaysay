@@ -1,0 +1,17 @@
+nav {
+  background: $COLOR_DARKEST;
+  box-shadow: $DP4;
+  color: $COLOR_GRAY;
+  display: flex;
+  height: 5rem;
+}
+
+  .nav__list {
+    display: none;
+  }
+
+  .nav__trigger {
+    position: absolute;
+    right: 0;
+    transform: translate(-1.6rem, 1.2rem);
+  }
