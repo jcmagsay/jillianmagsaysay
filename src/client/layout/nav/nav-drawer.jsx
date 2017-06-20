@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import classNames from 'classnames';
 import {NavLink} from 'react-router-dom';
 import Icon from 'components/icon';
 
@@ -9,8 +10,15 @@ export default class NavDrawer extends Component {
 
   render() {
     const { children, routes } = this.props;
+    const drawerClasses = classNames(
+      'nav-drawer',
+      {
+        'nav-drawer--open': this.props.isOpen
+      }
+    );
+
     return (
-      <section className="nav-drawer">
+      <section className={drawerClasses}>
         <NavLink
           exact
           className="nav-drawer__logo"
@@ -19,7 +27,7 @@ export default class NavDrawer extends Component {
           <img src={require('media/images/logo-lg.png')} height="100" />
         </NavLink>
         <ul className="nav-drawer__list">
-          {routes.navRoutes.map((route, i) => {
+          {this.props.routes.navRoutes.map((route, i) => {
             return (
               <li
                 className="nav-drawer__list-item"
@@ -37,6 +45,9 @@ export default class NavDrawer extends Component {
             )
           })}
         </ul>
+        <button onClick={this.props.toggleNav}>
+          <Icon type="x" />
+        </button>
       </section>
     );
   }
