@@ -3,7 +3,8 @@ PAGE STYLES
 --------------------------------------- */
 
 .page__content {
+  align-items: center;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   padding: 2.4rem;
 }
