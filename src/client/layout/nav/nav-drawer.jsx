@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import classNames from 'classnames';
 import {NavLink} from 'react-router-dom';
 import Icon from 'components/icon';
+import Text from 'components/text';
 
 export default class NavDrawer extends Component {
   constructor() {
@@ -19,13 +20,16 @@ export default class NavDrawer extends Component {
 
     return (
       <section className={drawerClasses}>
-        <NavLink
-          exact
-          className="nav-drawer__logo"
-          to="/"
-        >
-          <img src={require('media/images/logo-lg.png')} height="100" />
-        </NavLink>
+        <div className="nav-drawer__header">
+          <NavLink
+            exact
+            className="nav-drawer__logo"
+            onClick={this.props.toggleNav}
+            to="/"
+          >
+            <img src={require('media/images/logo-lg.png')} height="100" />
+          </NavLink>
+        </div>
         <ul className="nav-drawer__list">
           {this.props.routes.navRoutes.map((route, i) => {
             return (
@@ -37,9 +41,14 @@ export default class NavDrawer extends Component {
                   exact
                   className="nav-drawer__link"
                   activeClassName="nav-drawer__link--active"
+                  onClick={this.props.toggleNav}
                   to={route.path}
                 >
-                  {route.name}
+                  <Text
+                    tag="h5"
+                    type="display-lg"
+                  >{route.name}</Text>
+
                 </NavLink>
               </li>
             )
