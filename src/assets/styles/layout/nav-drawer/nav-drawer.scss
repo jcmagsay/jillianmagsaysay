@@ -34,4 +34,9 @@
     position: absolute;
     top: 1.2rem;
     right: 1.6rem;
+    transition: all 0.5s 0.35s;
+    transform: scale(0, 0) rotate(0deg);
   }
+    .nav-drawer__close--active {
+      transform: scale(1, 1) rotate(-90deg);
+    }

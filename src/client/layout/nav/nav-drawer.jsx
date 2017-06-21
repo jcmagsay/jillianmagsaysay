@@ -17,7 +17,11 @@ export default class NavDrawer extends Component {
         'nav-drawer--open': this.props.isOpen
       }
     );
-    
+    const drawerCloseClasses = classNames(
+      'nav-drawer__close',
+      { 'nav-drawer__close--active': this.props.isOpen }
+    );
+
     return (
       <section className={drawerClasses}>
         <div className="nav-drawer__header">
@@ -55,7 +59,7 @@ export default class NavDrawer extends Component {
           })}
         </ul>
         <button
-          className="nav-drawer__close"
+          className={drawerCloseClasses}
           onClick={this.props.toggleNav}
         >
           <Icon type="x" />
