@@ -10,6 +10,13 @@ export default class Nav extends Component {
   }
 
   render() {
+    const navTriggerClasses = classNames(
+      'nav__trigger',
+      {
+        'nav__trigger--active': this.props.isOpen
+      }
+    );
+
     return (
       <nav className="nav">
         <NavLink
@@ -38,7 +45,7 @@ export default class Nav extends Component {
             )
           })}
         </ul>
-        <div className="nav__trigger">
+        <div className={navTriggerClasses}>
           <button onClick={this.props.toggleNav}>
             <Icon type="menu" />
           </button>

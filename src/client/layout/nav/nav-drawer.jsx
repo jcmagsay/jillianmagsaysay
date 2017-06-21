@@ -17,7 +17,7 @@ export default class NavDrawer extends Component {
         'nav-drawer--open': this.props.isOpen
       }
     );
-
+    
     return (
       <section className={drawerClasses}>
         <div className="nav-drawer__header">

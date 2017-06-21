@@ -10,8 +10,8 @@ export default class Icon extends Component {
     const { children, className, type, fill, stroke } = this.props;
     const IconVariant = Icons[type];
     return (
-      <i>
-        <IconVariant className={className}>
+      <i className={className}>
+        <IconVariant fill={fill} stroke={stroke}>
           {children}
         </IconVariant>
       </i>
