@@ -5,19 +5,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 0;
+  opacity: 0.1;
   position: fixed;
-  top: 0;
+  right: 2.4rem;
+  top: 2.4rem;
   width: 100%;
   transform-origin: top right;
-  transform: scale(0, 0);
-  transition: all 0.35s ease-out;
+  transform: scale(0, 0) rotate(180deg);
+  transition: all 0.5s ease-out;
 }
 
   .nav-drawer--open {
-    // box-shadow: $DP24;
     opacity: 1;
-    transform: scale(1, 1);
+    top: 0;
+    right: 0;
+    transform: scale(1, 1) rotate(0deg);;
   }
 
   .nav-drawer__header {
