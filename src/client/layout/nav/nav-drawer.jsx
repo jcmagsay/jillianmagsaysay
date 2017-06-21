@@ -54,7 +54,10 @@ export default class NavDrawer extends Component {
             )
           })}
         </ul>
-        <button onClick={this.props.toggleNav}>
+        <button
+          className="nav-drawer__close"
+          onClick={this.props.toggleNav}
+        >
           <Icon type="x" />
         </button>
       </section>
