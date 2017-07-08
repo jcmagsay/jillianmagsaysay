@@ -3,7 +3,7 @@
 --------------------------------------- */
 
 @mixin text($size: 1.5rem, $weight: 300, $lHeight: 1.2) {
-  font-size: $size / 2;
+  font-size: $size / 1.5;
   font-weight: $weight;
   line-height: 1 * 1.7;
 }
