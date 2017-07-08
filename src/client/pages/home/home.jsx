@@ -1,16 +1,48 @@
 import React, {Component} from 'react';
 import Card from 'components/card';
+import ListItem from 'components/list-item';
 import Page from 'components/page';
 
 export default class Home extends Component {
   constructor () {
     super();
+
+    this.generateData();
+  }
+
+  generateData() {
+    this.listItems = [
+      {
+        'avatar': 'account',
+        'primaryContent': 'Want to know more about me?',
+        'title': 'About',
+        'url': ''
+      },
+      {
+        'avatar': 'code',
+        'primaryContent': 'Curious what my strengths are?',
+        'title': 'Skills',
+        'url': ''
+      },
+      {
+        'avatar': 'briefcase',
+        'primaryContent': 'Check out some past and upcoming projects',
+        'title': 'Projects',
+        'url': ''
+      },
+      {
+        'avatar': 'lightbulb',
+        'primaryContent': 'I am full of ideas and always solving fun problems with code',
+        'title': 'Idea Bucket',
+        'url': ''
+      }
+    ];
   }
 
   _renderHeroSupportingText() {
     return(
       <div>
-        I'm a Senior Software Engineer, residing in the Denver Metro Area. I currently work at <a href="https://mondorobot.com/">Mondo Robot</a> in Boulder, CO building BIG, BOLD, and BADASS technology.
+        I'm a Senior Software Engineer, residing in the Denver Metro Area. I currently work at <a href="http://mondorobot.com/">Mondo Robot</a> in Boulder, CO building BIG, BOLD, and BADASS technology.
       </div>
     );
   }
@@ -23,30 +55,18 @@ export default class Home extends Component {
         heroSupportingTxt={this._renderHeroSupportingText()}
       >
         <div className="grid">
-          <div className="grid__col">
-            <Card
-              title="About"
-              supportingText="Want to know more about me?"
-            />
-          </div>
-          <div className="grid__col">
-            <Card
-              title="Skills"
-              supportingText="Curious what my strengths are?"
-            />
-          </div>
-          <div className="grid__col">
-            <Card
-              title="Projects"
-              supportingText="Check out some past and upcoming projects"
-            />
-          </div>
-          <div className="grid__col">
-            <Card
-              title="My Idea Bucket"
-              supportingText="I am full of ideas and always solving fun problems with code"
-            />
-          </div>
+          {this.listItems.map((listItem, i) => {
+            return(
+              <div className="grid__col" key={`list-item-${i}`}>
+                <ListItem
+                  actions=""
+                  avatar={listItem.avatar}
+                  title={listItem.title}
+                  primaryContent={listItem.primaryContent}
+                />
+            </div>
+            );
+          })}
         </div>
       </Page>
     );
