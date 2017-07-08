@@ -6,8 +6,15 @@ export default class Card extends Component {
     super();
   }
 
+  _renderImage(image, imageAlt) {
+    if (!image) return;
+    return(
+      <img src={image} alt={`${imageAlt}-image`} />
+    );
+  }
+
   render() {
-    const { actions, children, title, supportingText } = this.props;
+    const { actions, children, image, imageAlt, title, supportingText } = this.props;
 
     return (
       <section className="card">
@@ -15,6 +22,7 @@ export default class Card extends Component {
           <Text type="title">
             {title}
           </Text>
+          {this._renderImage(image, title)}
         </div>
         <div className="card__supporting-text">
           {supportingText}

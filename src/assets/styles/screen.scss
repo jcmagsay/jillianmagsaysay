@@ -3,11 +3,16 @@
 --------------------------------------- */
 
 /* ------------------------------------
- LAYOUT
+ LANDMARKS
 --------------------------------------- */
 
-@import 'layout/nav/nav';
-@import 'layout/nav-drawer/nav-drawer';
+@import 'landmarks/nav/nav';
+@import 'landmarks/nav-drawer/nav-drawer';
+
+/* ------------------------------------
+ LAYOUT
+--------------------------------------- */
+@import 'layout/grid/grid';
 
 /* ------------------------------------
  COMPONENTS

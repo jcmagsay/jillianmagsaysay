@@ -22,22 +22,32 @@ export default class Home extends Component {
         heroTitle="Hi, I'm Jill"
         heroSupportingTxt={this._renderHeroSupportingText()}
       >
-        <Card
-          title="About"
-          supportingText="Want to know more about me?"
-        />
-        <Card
-          title="Skills"
-          supportingText="Curious what my strengths are?"
-        />
-        <Card
-          title="Projects"
-          supportingText="Check out some past and upcoming projects"
-        />
-        <Card
-          title="My Idea Bucket"
-          supportingText="I am full of ideas and always solving fun problems with code"
-        />
+        <div className="grid">
+          <div className="grid__col">
+            <Card
+              title="About"
+              supportingText="Want to know more about me?"
+            />
+          </div>
+          <div className="grid__col">
+            <Card
+              title="Skills"
+              supportingText="Curious what my strengths are?"
+            />
+          </div>
+          <div className="grid__col">
+            <Card
+              title="Projects"
+              supportingText="Check out some past and upcoming projects"
+            />
+          </div>
+          <div className="grid__col">
+            <Card
+              title="My Idea Bucket"
+              supportingText="I am full of ideas and always solving fun problems with code"
+            />
+          </div>
+        </div>
       </Page>
     );
   }

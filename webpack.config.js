@@ -61,6 +61,7 @@ module.exports = {
       'components': path.resolve(__dirname, './src/client/components'),
       'helpers': path.resolve(__dirname, './src/client/helpers'),
       'icons': path.resolve(__dirname, './src/client/icons'),
+      'landmarks': path.resolve(__dirname, './src/client/landmarks'),
       'layout': path.resolve(__dirname, './src/client/layout'),
       'pages': path.resolve(__dirname, './src/client/pages'),
       'routes': path.resolve(__dirname, './src/routes')

@@ -3,11 +3,17 @@
 --------------------------------------- */
 
 /* ------------------------------------
+ LANDMARKS
+--------------------------------------- */
+
+@import 'landmarks/nav/nav_md';
+@import 'landmarks/nav-drawer/nav-drawer_md';
+
+/* ------------------------------------
  LAYOUT
 --------------------------------------- */
 
-@import 'layout/nav/nav_md';
-@import 'layout/nav-drawer/nav-drawer_md';
+@import 'layout/grid/grid_md';
 
 /* ------------------------------------
  COMPONENTS
