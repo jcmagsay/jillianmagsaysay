@@ -23,6 +23,9 @@ export default class Ideas extends Component {
         <Text type="headline">
           {this.description}
         </Text>
+        <Text type="subheading">
+          Check back soon to view my recent experiments.
+        </Text>
       </Page>
     );
   }
