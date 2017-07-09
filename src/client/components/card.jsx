@@ -29,7 +29,7 @@ export default class Card extends Component {
   }
 
   render() {
-    const { actions, align, children, image, imageAlt, title, supportingText } = this.props;
+    const { actions, align, caption, children, image, imageAlt, title, supportingText } = this.props;
     const cardClasses = classNames(
       'card',
       {
@@ -45,7 +45,10 @@ export default class Card extends Component {
           {this._renderImage()}
         </div>
         <div className="card__supporting-text">
-          {supportingText}
+          <Text type="caption">
+            {caption}
+          </Text>
+          <div className="spacer">{supportingText}</div>
         </div>
         <div className="card__actions">
           {this._renderLink()}

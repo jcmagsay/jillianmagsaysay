@@ -76,6 +76,7 @@ export default class Projects extends Component {
                 <Card
                   actions={project.actions}
                   align="centered"
+                  caption={project.role}
                   linkInvisible={project.linkInvisible}
                   theme="secondary"
                   title={project.name}
@@ -92,8 +93,9 @@ export default class Projects extends Component {
               <div className="grid__col" key={`project-${i}`}>
                 <Card
                   actions={project.actions}
-                  linkInvisible={project.linkInvisible}
                   align="centered"
+                  caption={project.role}
+                  linkInvisible={project.linkInvisible}
                   theme="primary"
                   title={project.name}
                   supportingText={project.description}
