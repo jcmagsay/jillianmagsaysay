@@ -3,6 +3,7 @@
 --------------------------------------- */
 
 .card {
+  border-radius: 0.2rem;
   box-shadow: $DP4;
   min-height: 20rem;
   width: 27.5rem;
@@ -11,6 +12,7 @@
 
 .card__title {
   background: $COLOR_BLUE;
+  border-radius: 0.2rem;
   color: $COLOR_LIGHTEST;
   padding: 1.6rem;
 }
