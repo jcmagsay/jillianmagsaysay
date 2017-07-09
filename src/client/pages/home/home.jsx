@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Card from 'components/card';
 import ListItem from 'components/list-item';
 import Page from 'components/page';
 

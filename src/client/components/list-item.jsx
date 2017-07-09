@@ -8,6 +8,20 @@ export default class ListItem extends Component {
     super();
   }
 
+  _renderActions() {
+    if (!this.props.externalLink) return;
+    return(
+      <div className="list__item-actions">
+        <NavLink
+          exact
+          to={this.props.externalLink}
+        >
+          Learn More
+        </NavLink>
+      </div>
+    );
+  }
+
   render() {
     const { avatar, children, externalLink, primaryContent, secondaryContent, title } = this.props;
 
@@ -24,14 +38,7 @@ export default class ListItem extends Component {
         <div className="list__item-primary-content">
           {primaryContent}
         </div>
-        <div className="list__item-actions">
-          <NavLink
-            exact
-            to={externalLink}
-          >
-            Learn More
-          </NavLink>
-        </div>
+        {this._renderActions()}
       </li>
     );
   }
