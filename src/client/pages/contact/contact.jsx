@@ -19,7 +19,7 @@ export default class Contact extends Component {
       },
       {
         'avatar': 'glasses',
-        'primaryContent': `Need to get a customize site up and running in no time?`,
+        'primaryContent': `Need to get a customized site up and running in no time?`,
         'title': 'Freelance',
       },
       {
