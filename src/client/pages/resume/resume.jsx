@@ -12,7 +12,7 @@ export default class Resume extends Component {
       <Page
         heroImage={require('media/images/resume.png')}
         heroTitle="Software Engineer"
-        heroSupportingTxt="If you want to be formal"
+        heroSupportingTxt="Life experience is what makes us who we are"
       >
         <Text type="headline" align="centered">
           ***CV is currently out of date and will be updated soon.***

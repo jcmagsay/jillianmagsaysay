@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
 import Page from 'components/page';
+import Text from 'components/text';
 
 export default class Ideas extends Component {
   constructor () {
     super();
+
+    this.introduction = `My Idea Bucket is a place where I can experiment and use my creativity without limits or boundaries.`
+    this.description = `At work, we're all held back by timelines and budget constraints. At home, I can determine when a project is complete, experiment with new technologies, and use my talents at maximum potential.`;
   }
 
   render() {
@@ -11,9 +15,12 @@ export default class Ideas extends Component {
       <Page
         heroImage={require('media/images/ideas.png')}
         heroTitle="Idea Bucket"
-        heroSupportingTxt="The only way to get better is to keep learning"
+        heroSupportingTxt="Knowledge is not power. It's only potential power. Action is power."
       >
-         Coming soon, please check back soon...
+        <Text type="headline">
+          {this.introduction}
+          {this.description}
+        </Text>
       </Page>
     );
   }
