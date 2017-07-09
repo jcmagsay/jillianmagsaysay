@@ -32,7 +32,7 @@ export default class Home extends Component {
       },
       {
         'avatar': 'lightbulb',
-        'primaryContent': 'I am full of ideas and always solving fun problems with code',
+        'primaryContent': `With ever-changing technology, I'm always looking for ways to explore new programming languages, design patterns, and architectural approaches. My idea bucket is a way of transforming my creativity to solve fun problems with code.`,
         'title': 'Idea Bucket',
         'url': '/ideas'
       }
