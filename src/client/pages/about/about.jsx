@@ -37,7 +37,7 @@ export default class About extends Component {
       },
       {
         'avatar': 'beer',
-        'primaryContent': `I credit my brother-in-law and Pastoral for introducing me to Craft Beer. Over the years, I've developed a palette for tasting different styles of beer and being able to differentiate them by color, smell, and flavor profile. As I developed these tastes, I needed to take on a new challenge, homebrewing. Homebrewing is surprisingly rewarding when the output is drinkable. If you're a fellow homebrewer, you know exactly what I'm talking about. While I'm not nearly as passionate about homebrewing as I am cooking, I still love sitting in a camping chair in my driveway creating some tastey wort in my 10 gallon brew kettle.`
+        'primaryContent': `I credit my brother-in-law and Pastoral for introducing me to Craft Beer. Over the years, I've developed a palette for tasting different styles of beer and being able to differentiate them by color, smell, and flavor profile. As I developed these tastes, I needed to take on a new challenge, homebrewing. Homebrewing is surprisingly rewarding when the output is drinkable. If you're a fellow homebrewer, you know exactly what I'm talking about. While I'm not nearly as passionate about homebrewing as I am cooking, I still love sitting in a camping chair in my driveway creating some tastey wort in my 10 gallon brew kettle.`,
         'title': 'Homebrewer'
       }
     ];
