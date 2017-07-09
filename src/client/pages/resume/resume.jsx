@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Page from 'components/page';
+import Text from 'components/text';
 
 export default class Resume extends Component {
   constructor () {
@@ -13,7 +14,14 @@ export default class Resume extends Component {
         heroTitle="Software Engineer"
         heroSupportingTxt="If you want to be formal"
       >
-        Coming soon, please check back soon...
+        <Text type="headline" align="centered">
+          ***CV is currently out of date and will be updated soon.***
+        </Text>
+        <div className="grid">
+          <div className="grid__col">
+            <img width="90%" src={require('media/images/cv.png')} alt="Jill Resume" />
+          </div>
+        </div>
       </Page>
     );
   }
