@@ -31,7 +31,7 @@ export default class Home extends Component {
       },
       {
         'avatar': 'lightbulb',
-        'primaryContent': `With ever-changing technology, I'm always looking for ways to explore new tech. My idea bucket is a way of transforming my creativity to solve fun problems with code.`,
+        'primaryContent': `With ever-changing technology, I'm always looking for ways to explore new tech. My idea bucket is a way of transforming my creativity into experimental code solutions.`,
         'title': 'Idea Bucket',
         'url': '/ideas'
       }
