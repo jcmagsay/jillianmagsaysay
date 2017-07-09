@@ -26,7 +26,7 @@ export default class Home extends Component {
       {
         'avatar': 'code',
         'primaryContent': 'Curious what my strengths are? I have experience writing enterprise software in several languages.',
-        'title': 'Skills',
+        'title': 'Experience',
         'url': '/resume'
       },
       {
