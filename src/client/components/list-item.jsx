@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { NavLink } from 'react-router-dom';
 import Icon from 'components/icon';
 import Text from 'components/text';
 
@@ -8,7 +9,7 @@ export default class ListItem extends Component {
   }
 
   render() {
-    const { actions, avatar, children, primaryContent, secondaryContent, title } = this.props;
+    const { avatar, children, externalLink, primaryContent, secondaryContent, title } = this.props;
 
     return (
       <li className="list__item">
@@ -24,7 +25,12 @@ export default class ListItem extends Component {
           {primaryContent}
         </div>
         <div className="list__item-actions">
-          {actions}
+          <NavLink
+            exact
+            to={externalLink}
+          >
+            Learn More
+          </NavLink>
         </div>
       </li>
     );

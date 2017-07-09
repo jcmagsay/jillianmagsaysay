@@ -8,7 +8,7 @@ export default class IconCode extends Component {
   render() {
     return (
       <svg width="36" height="36" viewBox="0 0 24 24">
-        <path fill="#FFFFFF" d="M14.6,16.6L19.2,12L14.6,7.4L16,6L22,12L16,18L14.6,16.6M9.4,16.6L4.8,12L9.4,7.4L8,6L2,12L8,18L9.4,16.6Z" />
+        <path fill="#FFFFFF" d="M12.89,3L14.85,3.4L11.11,21L9.15,20.6L12.89,3M19.59,12L16,8.41V5.58L22.42,12L16,18.41V15.58L19.59,12M1.58,12L8,5.58V8.41L4.41,12L8,15.58V18.41L1.58,12Z" />
       </svg>
     );
   }

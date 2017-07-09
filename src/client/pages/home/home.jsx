@@ -14,27 +14,27 @@ export default class Home extends Component {
     this.listItems = [
       {
         'avatar': 'account',
-        'primaryContent': 'Want to know more about me?',
+        'primaryContent': `Want to know more about me? While I'm a professional software engineer, I participate in many local activities in my community.`,
         'title': 'About',
-        'url': ''
+        'url': '/about'
       },
       {
         'avatar': 'code',
-        'primaryContent': 'Curious what my strengths are?',
+        'primaryContent': 'Curious what my strengths are? I have experience writing enterprise software in several languages.',
         'title': 'Skills',
-        'url': ''
+        'url': '/projects'
       },
       {
         'avatar': 'briefcase',
-        'primaryContent': 'Check out some past and upcoming projects',
+        'primaryContent': `Interested in what professional projects I've worked on? Check out my past and upcoming projects.`,
         'title': 'Projects',
-        'url': ''
+        'url': '/resume'
       },
       {
         'avatar': 'lightbulb',
         'primaryContent': 'I am full of ideas and always solving fun problems with code',
         'title': 'Idea Bucket',
-        'url': ''
+        'url': '/ideas'
       }
     ];
   }
@@ -59,7 +59,7 @@ export default class Home extends Component {
             return(
               <div className="grid__col" key={`list-item-${i}`}>
                 <ListItem
-                  actions=""
+                  externalLink={listItem.url}
                   avatar={listItem.avatar}
                   title={listItem.title}
                   primaryContent={listItem.primaryContent}

@@ -10,6 +10,10 @@ nav {
     display: none;
   }
 
+  .nav__link {
+    color: $COLOR_LIGHTEST;
+  }
+
   .nav__trigger {
     opacity: 1;
     position: absolute;
@@ -20,6 +24,6 @@ nav {
 
     .nav__trigger--active {
       opacity: 0;
-      transition: all 0.35s;
+      transition: all 0.5s;
       transform: translate(-1.6rem, 1.2rem) rotate(-180deg) scale(0, 0);
     }
