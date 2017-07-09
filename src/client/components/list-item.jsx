@@ -17,7 +17,7 @@ export default class ListItem extends Component {
           <Icon type={avatar} />
         </div>
         <div className="list__item-title">
-          <Text type="headline" align="centered">
+          <Text type="display-sm" align="centered">
             {title}
           </Text>
         </div>
