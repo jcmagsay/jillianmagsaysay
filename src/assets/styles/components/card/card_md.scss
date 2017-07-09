@@ -4,9 +4,9 @@
 
 .card {
   box-shadow: $DP4;
-  min-height: 20rem;
-  width: 30rem;
-  margin: 0 1.6rem 1.6rem 0;
+  min-height: 10rem;
+  width: 40rem;
+  margin-bottom: 1.6rem;
 }
 
 .card__title {
@@ -17,8 +17,4 @@
 
 .card__supporting-text {
   padding: 1.6rem;
-}
-
-.card__actions {
-
 }

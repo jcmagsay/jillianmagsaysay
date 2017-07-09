@@ -35,7 +35,7 @@ export default class Projects extends Component {
       },
       {
         'description': 'The Stock Screener is a great resource that can help you easily match your ideas with potential investments.',
-        'name': 'Fidelity Investments Screeners',
+        'name': 'Fidelity Screeners',
         'role': 'Front-End & Middleware Engineer'
       },
       {
@@ -53,15 +53,20 @@ export default class Projects extends Component {
         heroTitle="Street Cred"
         heroSupportingTxt="Would buttercream be as good without the butter?"
       >
-        {this.projects.map(project => {
-          return(
-            <Card
-              title={project.name}
-              supportingText={project.description}
-              actions={project.role}
-            />
-          );
-        })}
+        <section className="grid">
+          {this.projects.map((project, i) => {
+            return(
+              <div className="grid__col" key={`project-${i}`}>
+                <Card
+                  align="centered"
+                  title={project.name}
+                  supportingText={project.description}
+                  actions={project.role}
+                />
+              </div>
+            );
+          })}
+        </section>
       </Page>
     );
   }

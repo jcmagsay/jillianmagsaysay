@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import classNames from 'classnames';
 import Text from 'components/text';
 
 export default class Card extends Component {
@@ -14,10 +15,15 @@ export default class Card extends Component {
   }
 
   render() {
-    const { actions, children, image, imageAlt, title, supportingText } = this.props;
-
+    const { actions, align, children, image, imageAlt, title, supportingText } = this.props;
+    const cardClasses = classNames(
+      'card',
+      {
+        [`card--${align}`]: align
+      }
+    );
     return (
-      <section className="card">
+      <section className={cardClasses}>
         <div className="card__title">
           <Text type="title">
             {title}
