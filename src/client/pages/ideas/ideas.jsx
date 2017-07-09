@@ -19,6 +19,8 @@ export default class Ideas extends Component {
       >
         <Text type="headline">
           {this.introduction}
+        </Text>
+        <Text type="headline">
           {this.description}
         </Text>
       </Page>
