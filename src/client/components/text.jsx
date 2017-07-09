@@ -7,7 +7,7 @@ export default class Text extends Component {
   }
 
   render() {
-    const { align, children, className, color, tag, type, weight } = this.props;
+    const { align, children, className, color, tag, type, weight, underlined } = this.props;
     const TagVariant = tag || 'div';
     const textClasses = classNames(
       'text',
@@ -15,7 +15,8 @@ export default class Text extends Component {
         [`text--${align}`]: align,
         [`text--${color}`]: color,
         [`text--${type}`]: type,
-        [`text--${weight}`]: weight
+        [`text--${weight}`]: weight,
+        [`text--underlined`]: underlined
       },
       className
     )

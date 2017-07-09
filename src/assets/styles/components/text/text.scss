@@ -59,3 +59,11 @@
 .text--centered {
   text-align: center;
 }
+
+.text--underlined::after {
+  border-bottom: 0.1rem solid rgba($COLOR_DARK, 0.2);
+  content: '';
+  display: block;
+  margin-bottom: 1.6rem;
+  padding-top: 0.8rem;
+}

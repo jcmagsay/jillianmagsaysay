@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Card from 'components/card';
 import Page from 'components/page';
+import Text from 'components/text';
 
 export default class Projects extends Component {
   constructor () {
@@ -10,11 +11,19 @@ export default class Projects extends Component {
   }
 
   generateData() {
-    this.projects = [
+    this.futureProjects = [
+      {
+        'description': 'Customized Rider Portal for Cyclists based on true body measurement data.',
+        'name': 'Retul Rider Portal',
+        'role': 'Tech Lead, Front-End Engineering'
+      }
+    ];
+
+    this.pastProjects = [
       {
         'description': 'Web app for Comcast customers to organize call flow systems.',
         'name': 'Comcast SIMON',
-        'role': 'Tech Lead, Front-End Engineering'
+        'role': 'Support Tech Lead, Front-End Engineering'
       },
       {
         'description': 'Sell, deliver, manage and invoice for cloud communications services all under your own brand.',
@@ -25,7 +34,7 @@ export default class Projects extends Component {
         'description': `The GlobalXplorer\u00B0 platform is an online platform that uses the power of the crowd to analyze the incredible wealth of satellite images currently available to archaeologists.`,
         'name': `Global Xplorer\u00B0`,
         'role': 'Tech Lead, Front-End & Middleware Engineering',
-        'url': ''
+        'url': 'http://globalxplorer.org/'
       },
       {
         'description': 'The Future of Tranportation',
@@ -53,12 +62,30 @@ export default class Projects extends Component {
         heroTitle="Street Cred"
         heroSupportingTxt="Would buttercream be as good without the butter?"
       >
+        <Text type="display-sm" underlined>Upcoming Projects</Text>
         <section className="grid">
-          {this.projects.map((project, i) => {
+          {this.futureProjects.map((project, i) => {
             return(
               <div className="grid__col" key={`project-${i}`}>
                 <Card
                   align="centered"
+                  theme="secondary"
+                  title={project.name}
+                  supportingText={project.description}
+                  actions={project.role}
+                />
+              </div>
+            );
+          })}
+        </section>
+        <Text type="display-sm" underlined>Past Projects</Text>
+        <section className="grid">
+          {this.pastProjects.map((project, i) => {
+            return(
+              <div className="grid__col" key={`project-${i}`}>
+                <Card
+                  align="centered"
+                  theme="primary"
                   title={project.name}
                   supportingText={project.description}
                   actions={project.role}
