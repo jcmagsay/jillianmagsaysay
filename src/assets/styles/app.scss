@@ -43,3 +43,10 @@
 @media only screen and (min-width: $SCREEN_MD) {
   @import 'screen_md';
 }
+
+/* ------------------------------------
+ LARGE SCREEN STYLES
+--------------------------------------- */
+@media only screen and (min-width: $SCREEN_LG) {
+  @import 'screen_lg';
+}

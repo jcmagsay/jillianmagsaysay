@@ -19,15 +19,15 @@ export default class Home extends Component {
         'url': '/about'
       },
       {
-        'avatar': 'code',
-        'primaryContent': 'Curious what my strengths are? I have experience writing enterprise software in several languages.',
-        'title': 'Skills',
-        'url': '/projects'
-      },
-      {
         'avatar': 'briefcase',
         'primaryContent': `Interested in what professional projects I've worked on? Check out my past and upcoming projects.`,
         'title': 'Projects',
+        'url': '/projects'
+      },
+      {
+        'avatar': 'code',
+        'primaryContent': 'Curious what my strengths are? I have experience writing enterprise software in several languages.',
+        'title': 'Skills',
         'url': '/resume'
       },
       {
