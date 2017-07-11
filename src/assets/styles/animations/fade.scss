@@ -1,0 +1,24 @@
+.canFade {
+  position: relative;
+  opacity: 0;
+  transition: all 0.35s linear;
+  &::after {
+    background: $COLOR_DARK;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    transform: scale(1, 1);
+    transform-origin: right;
+    transition: transform 1s linear;
+  }
+}
+
+.isFading {
+  opacity: 1;
+  &::after {
+    transform: scale(0, 1);
+  }
+}
