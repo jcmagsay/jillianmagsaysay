@@ -1,4 +1,4 @@
-.canFade {
+.fadeLeft {
   position: relative;
   opacity: 0;
   transition: all 0.35s linear;
@@ -16,9 +16,18 @@
   }
 }
 
-.isFading {
+.fadingLeft {
   opacity: 1;
   &::after {
     transform: scale(0, 1);
   }
+}
+
+.fadeIn {
+  opacity: 0;
+  transition: all 0.5s linear;
+}
+
+.fadingIn {
+  opacity: 1;
 }

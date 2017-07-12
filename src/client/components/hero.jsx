@@ -23,16 +23,23 @@ export default class Hero extends Component {
     const { children, image, title, supportingText } = this.props;
 
     const titleClasses = classNames(
-      'canFade',
+      'fadeLeft',
       {
-        'isFading': this.state.animateText
+        'fadingLeft': this.state.animateText
+      }
+    );
+    const imageClasses = classNames(
+      'hero__image',
+      'fadeIn',
+      {
+        'fadingIn': this.state.animateText
       }
     );
 
     return (
       <section className="hero">
         <div className="hero__avatar">
-          <img className="hero__image" src={image} />
+          <img className={imageClasses} src={image} />
         </div>
         <div className="hero__details">
           <Text
