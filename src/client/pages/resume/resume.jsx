@@ -15,11 +15,13 @@ export default class Resume extends Component {
         heroSupportingTxt="Life experience is what makes us who we are"
       >
         <Text type="headline" align="centered">
-          ***CV is currently out of date and will be updated soon.***
+          ***Click to download***
         </Text>
         <div className="grid">
           <div className="grid__col">
-            <img width="90%" src={require('media/images/cv.png')} alt="Jill Resume" />
+            <a href={require('media/documents/magsaysay_cv.pdf')} target="_blank">
+              <img width="50%" src={require('media/images/cv.png')} alt="Jill Resume" />
+            </a>
           </div>
         </div>
       </Page>
