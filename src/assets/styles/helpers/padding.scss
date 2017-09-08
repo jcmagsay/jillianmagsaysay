@@ -1,0 +1,55 @@
+/* ---------------------------------------------------------------------
+ PADDING CLASS
+------------------------------------------------------------------------ */
+
+// Based on a rhythm of 0.8rem
+
+@mixin padding($rhythm, $resolution: '') {
+  .pad--#{$rhythm}-#{$resolution} {
+    padding: rhythm($rhythm);
+  }
+}
+
+@include padding(0);
+@include padding(1);
+@include padding(2);
+@include padding(3);
+@include padding(4);
+
+/* ---------------------------------------------------------------------
+ PADDING OPTIONS MIXIN
+ ---------------------
+ Contains configurations that will override the padding mixin above
+------------------------------------------------------------------------ */
+
+
+@mixin paddingOptions($rhythm) {
+  .pad-- {
+    &t-#{$rhythm} {
+      padding-top: rhythm($rhythm);
+    }
+    &b-#{$rhythm} {
+      padding-bottom: rhythm($rhythm);
+    }
+    &l-#{$rhythm} {
+      padding-left: rhythm($rhythm);
+    }
+    &r-#{$rhythm} {
+      padding-right: rhythm($rhythm);
+    }
+    &tb-#{$rhythm} {
+      padding-top: rhythm($rhythm);
+      padding-bottom: rhythm($rhythm);
+    }
+    &lr-#{$rhythm} {
+      padding-left: rhythm($rhythm);
+      padding-right: rhythm($rhythm);
+    }
+  }
+}
+
+@include paddingOptions(0);
+@include paddingOptions(1);
+@include paddingOptions(2);
+@include paddingOptions(3);
+@include paddingOptions(4);

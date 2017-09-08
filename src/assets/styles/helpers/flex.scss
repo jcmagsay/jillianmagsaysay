@@ -1,0 +1,16 @@
+/* ------------------------------------
+ FLEX STYLES
+--------------------------------------- */
+
+.flex {
+  display: flex;
+}
+
+.flex--1 {
+  flex: 1;
+}
+
+.flex--end {
+  @extend .flex;
+  justify-content: flex-end;
+}

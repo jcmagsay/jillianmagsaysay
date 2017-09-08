@@ -1,0 +1,54 @@
+/* ---------------------------------------------------------------------
+ MARGIN CLASS
+------------------------------------------------------------------------ */
+
+// Based on a rhythm of 0.8rem
+
+@mixin margin($rhythm, $resolution: '') {
+  .mar--#{$rhythm}-#{$resolution} {
+    margin: rhythm($rhythm);
+  }
+}
+
+@include margin(0);
+@include margin(1);
+@include margin(2);
+@include margin(3);
+@include margin(4);
+
+/* ---------------------------------------------------------------------
+ MARGIN OPTIONS MIXIN
+ ---------------------
+ Contains configurations that will override the margin mixin above
+------------------------------------------------------------------------ */
+
+@mixin paddingOptions($rhythm) {
+  .mar-- {
+    &t-#{$rhythm} {
+      margin-top: rhythm($rhythm);
+    }
+    &b-#{$rhythm} {
+      margin-bottom: rhythm($rhythm);
+    }
+    &l-#{$rhythm} {
+      margin-left: rhythm($rhythm);
+    }
+    &r-#{$rhythm} {
+      margin-right: rhythm($rhythm);
+    }
+    &tb-#{$rhythm} {
+      margin-top: rhythm($rhythm);
+      margin-bottom: rhythm($rhythm);
+    }
+    &lr-#{$rhythm} {
+      margin-left: rhythm($rhythm);
+      margin-right: rhythm($rhythm);
+    }
+  }
+}
+
+@include paddingOptions(0);
+@include paddingOptions(1);
+@include paddingOptions(2);
+@include paddingOptions(3);
+@include paddingOptions(4);

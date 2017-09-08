@@ -2,8 +2,10 @@
  APP STYLES
 --------------------------------------- */
 
-// RESET MUST BE FIRST IN THIS LIST
+// THESE MUST BE FIRST IN THIS FILE
 @import 'base/reset';
+@import 'helpers/vars';
+@import 'helpers/functions';
 
 /* ------------------------------------
  HELPER STYLES
@@ -11,9 +13,11 @@
 
 @import 'helpers/colors';
 @import 'helpers/dp';
-@import 'helpers/rhythm';
+@import 'helpers/flex';
+@import 'helpers/margin';
+@import 'helpers/padding';
+@import 'helpers/sizes';
 @import 'helpers/utilities';
-@import 'helpers/vars';
 
 /* ------------------------------------
  BASE STYLES
