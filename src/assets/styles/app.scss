@@ -4,20 +4,20 @@
 
 // THESE MUST BE FIRST IN THIS FILE
 @import 'base/reset';
-@import 'helpers/vars';
-@import 'helpers/functions';
+@import 'atoms/vars';
+@import 'atoms/functions';
 
 /* ------------------------------------
  HELPER STYLES
 --------------------------------------- */
 
-@import 'helpers/colors';
-@import 'helpers/dp';
-@import 'helpers/flex';
-@import 'helpers/margin';
-@import 'helpers/padding';
-@import 'helpers/sizes';
-@import 'helpers/utilities';
+@import 'atoms/colors';
+@import 'atoms/dp';
+@import 'atoms/flex';
+@import 'atoms/margin';
+@import 'atoms/padding';
+@import 'atoms/sizes';
+@import 'atoms/utilities';
 
 /* ------------------------------------
  BASE STYLES
