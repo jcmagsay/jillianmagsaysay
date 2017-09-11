@@ -1,0 +1,19 @@
+/* ------------------------------------
+PAGE STYLES
+--------------------------------------- */
+
+.page__content {
+  align-items: center;
+  padding: 2.4rem;
+}
+
+/* ------------------------------------
+ MD RESOLUTION STYLES
+--------------------------------------- */
+
+@include breakpoint($SCREEN_MD) {
+  .page__content {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

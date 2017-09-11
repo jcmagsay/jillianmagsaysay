@@ -12,14 +12,13 @@
 /* ------------------------------------
  LAYOUT
 --------------------------------------- */
-@import 'layout/grid/grid';
+@import 'layout/grid';
 
 /* ------------------------------------
  COMPONENTS
 --------------------------------------- */
 
-@import 'components/card/card';
-@import 'components/hero/hero';
+@import 'components/hero';
 @import 'components/list-item';
-@import 'components/page/page';
-@import 'components/text/text';
+@import 'components/page';
+@import 'components/text';

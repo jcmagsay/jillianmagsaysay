@@ -1,3 +1,5 @@
+import 'styles/components/card.scss';
+
 import React, {Component} from 'react';
 import classNames from 'classnames';
 import Text from 'components/text';

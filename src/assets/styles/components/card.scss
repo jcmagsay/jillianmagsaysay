@@ -1,12 +1,19 @@
+@import "../globals/variables";
+@import "../globals";
+
 /* ------------------------------------
  CARD STYLES
 --------------------------------------- */
 
+@mixin cardBase($minH, $w) {
+  min-height: #{$minH}rem;
+  width: #{$w}rem;
+}
+
 .card {
+  @include cardBase(20, 27.5);
   border-radius: 0.2rem;
   box-shadow: $DP4;
-  min-height: 20rem;
-  width: 27.5rem;
   margin-bottom: 1.6rem;
 }
 
@@ -36,4 +43,14 @@
 .card--centered {
   margin-left: auto;
   margin-right: auto;
+}
+
+/* ------------------------------------
+ MD RESOLUTION STYLES
+--------------------------------------- */
+
+@include breakpoint($SCREEN_MD) {
+ .card {
+   @include cardBase(10, 40);
+ }
 }

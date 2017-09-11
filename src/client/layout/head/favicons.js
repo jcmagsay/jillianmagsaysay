@@ -1,13 +1,13 @@
-require('media/images/favicons/apple-icon-57x57.png')
-require('media/images/favicons/apple-icon-60x60.png')
-require('media/images/favicons/apple-icon-72x72.png')
-require('media/images/favicons/apple-icon-76x76.png')
-require('media/images/favicons/apple-icon-114x114.png')
-require('media/images/favicons/apple-icon-120x120.png')
-require('media/images/favicons/apple-icon-144x144.png')
-require('media/images/favicons/apple-icon-152x152.png')
-require('media/images/favicons/apple-icon-180x180.png')
-require('media/images/favicons/android-icon-192x192.png')
-require('media/images/favicons/favicon-32x32.png')
-require('media/images/favicons/favicon-96x96.png')
-require('media/images/favicons/favicon-16x16.png')
+import 'media/images/favicons/apple-icon-57x57.png';
+import 'media/images/favicons/apple-icon-60x60.png';
+import 'media/images/favicons/apple-icon-72x72.png';
+import 'media/images/favicons/apple-icon-76x76.png';
+import 'media/images/favicons/apple-icon-114x114.png';
+import 'media/images/favicons/apple-icon-120x120.png';
+import 'media/images/favicons/apple-icon-144x144.png';
+import 'media/images/favicons/apple-icon-152x152.png';
+import 'media/images/favicons/apple-icon-180x180.png';
+import 'media/images/favicons/android-icon-192x192.png';
+import 'media/images/favicons/favicon-32x32.png';
+import 'media/images/favicons/favicon-96x96.png';
+import 'media/images/favicons/favicon-16x16.png';

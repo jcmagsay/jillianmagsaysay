@@ -9,11 +9,7 @@
  VARIABLES
 --------------------------------------- */
 
-@import 'vars/colors';
-@import 'vars/dp';
-@import 'vars/fonts';
-@import 'vars/resolutions';
-@import 'vars/rhythms';
+@import 'globals/variables';
 
 /* ------------------------------------
  SASS FUNCTIONS
@@ -37,7 +33,6 @@
 --------------------------------------- */
 
 @import 'base/elements';
-@import 'base/fonts';
 
 /* ------------------------------------
  LAYOUT STYLES
@@ -59,18 +54,3 @@
 --------------------------------------- */
 
 @import 'screen';
-
-/* ------------------------------------
- MEDIUM SCREEN STYLES
---------------------------------------- */
-@include breakpoint($SCREEN_MD) {
-  @import 'screen_md';
-}
-
-/* ------------------------------------
- LARGE SCREEN STYLES
---------------------------------------- */
-
-@include breakpoint($SCREEN_LG) {
-  @import 'screen_lg';
-}
