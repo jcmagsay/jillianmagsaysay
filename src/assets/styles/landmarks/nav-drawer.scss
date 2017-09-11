@@ -49,3 +49,9 @@
     .nav-drawer__close--active {
       transform: scale(1, 1) rotate(-90deg);
     }
+
+@include breakpoint($SCREEN_MD) {
+  .nav-drawer {
+    display: none;
+  }
+}
