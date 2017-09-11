@@ -4,20 +4,33 @@
 
 // THESE MUST BE FIRST IN THIS FILE
 @import 'base/reset';
-@import 'atoms/vars';
-@import 'atoms/functions';
+
+/* ------------------------------------
+ VARIABLES
+--------------------------------------- */
+
+@import 'vars/colors';
+@import 'vars/dp';
+@import 'vars/fonts';
+@import 'vars/resolutions';
+@import 'vars/rhythms';
+
+/* ------------------------------------
+ SASS FUNCTIONS
+--------------------------------------- */
+
+@import 'functions/breakpoints';
+@import 'functions/rhythm';
 
 /* ------------------------------------
  HELPER STYLES
 --------------------------------------- */
 
-@import 'atoms/colors';
-@import 'atoms/dp';
-@import 'atoms/flex';
-@import 'atoms/margin';
-@import 'atoms/padding';
-@import 'atoms/sizes';
-@import 'atoms/utilities';
+@import 'helpers/flex';
+@import 'helpers/margin';
+@import 'helpers/padding';
+@import 'helpers/sizes';
+@import 'helpers/utilities';
 
 /* ------------------------------------
  BASE STYLES
@@ -50,13 +63,14 @@
 /* ------------------------------------
  MEDIUM SCREEN STYLES
 --------------------------------------- */
-@media only screen and (min-width: $SCREEN_MD) {
+@include breakpoint($SCREEN_MD) {
   @import 'screen_md';
 }
 
 /* ------------------------------------
  LARGE SCREEN STYLES
 --------------------------------------- */
-@media only screen and (min-width: $SCREEN_LG) {
+
+@include breakpoint($SCREEN_LG) {
   @import 'screen_lg';
 }

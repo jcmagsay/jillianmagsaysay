@@ -1,4 +1,4 @@
-require('./assets/styles/app.scss');
+require('./assets/styles/globals.scss');
 
 import React from 'react';
 import {render} from 'react-dom';
@@ -8,3 +8,4 @@ import routes from 'routes/routes.js';
 render(
   <App />, document.getElementById('app')
 );
+ 
