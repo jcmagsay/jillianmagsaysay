@@ -31,6 +31,14 @@
  MD RESOLUTION STYLES
 --------------------------------------- */
 
+@include breakpoint($SCREEN_SM_MD) {
+  .hero__image {
+    display: flex;
+    margin: auto;
+    max-width: 50%;
+  }
+}
+
 @include breakpoint($SCREEN_MD) {
   .hero {
     display: flex;
@@ -46,6 +54,7 @@
   .hero__image {
     height: inherit;
     width: inherit;
+    max-width: initial;
   }
 
   .hero__details {
