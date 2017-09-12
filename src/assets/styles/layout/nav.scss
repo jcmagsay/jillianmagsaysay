@@ -1,4 +1,7 @@
-nav {
+@import "../globals/variables";
+@import "../globals";
+
+.nav {
   background: $COLOR_DARKEST;
   box-shadow: $DP4;
   color: $COLOR_GRAY;

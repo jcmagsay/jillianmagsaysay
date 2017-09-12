@@ -1,3 +1,5 @@
+import 'styles/components/page';
+
 import React, {Component} from 'react';
 import Hero from 'components/hero';
 

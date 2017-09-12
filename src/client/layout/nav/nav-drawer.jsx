@@ -1,3 +1,5 @@
+import 'styles/layout/nav-drawer';
+
 import React, {Component} from 'react';
 import classNames from 'classnames';
 import {NavLink} from 'react-router-dom';

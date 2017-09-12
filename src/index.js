@@ -5,7 +5,7 @@ import routes from 'routes/routes.js';
 
 // STYLES
 import 'styles/base/fonts';
-import 'styles/globals.scss';
+import 'styles/globals';
 
 render(
   <App />, document.getElementById('app')

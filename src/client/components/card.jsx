@@ -1,4 +1,4 @@
-import 'styles/components/card.scss';
+import 'styles/components/card';
 
 import React, {Component} from 'react';
 import classNames from 'classnames';
