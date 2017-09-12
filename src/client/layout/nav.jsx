@@ -3,7 +3,7 @@ import 'styles/layout/nav';
 import React, {Component} from 'react';
 import classNames from 'classnames';
 import {NavLink} from 'react-router-dom';
-import NavDrawer from 'layout/nav/nav-drawer';
+import NavDrawer from 'layout/nav-drawer';
 import Icon from 'components/icon';
 
 export default class Nav extends Component {

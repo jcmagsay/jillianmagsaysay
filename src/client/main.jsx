@@ -2,10 +2,10 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import classNames from 'classnames';
 import routes from 'routes/routes';
-import Footer from 'layout/footer/footer';
-import Nav from 'layout/nav/nav';
-import NavDrawer from 'layout/nav/nav-drawer';
-import 'layout/head/favicons';
+import Footer from 'layout/footer';
+import Nav from 'layout/nav';
+import NavDrawer from 'layout/nav-drawer';
+import 'layout/favicons';
 
 export default class Main extends React.Component {
   constructor(props) {

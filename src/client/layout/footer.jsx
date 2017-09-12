@@ -1,3 +1,5 @@
+import 'styles/layout/footer';
+
 import React, {Component} from 'react';
 import Icon from 'components/icon';
 
