@@ -12,19 +12,19 @@
   background: $COLOR_DARK;
   width: 100vw;
   max-width: 100%;
+  padding: 1.6rem;
 }
 
 .hero__image {
+  border-radius: 50%;
+  clip-path: circle(50% at 50% 50%);
   height: inherit;
   width: inherit;
   max-width: 100%;
 }
 
 .hero__details {
-  background: $COLOR_DARK;
   color: $COLOR_LIGHTEST;
-  max-width: 100%;
-  padding: 1.6rem;
 }
 
 /* ------------------------------------
@@ -52,9 +52,8 @@
   }
 
   .hero__image {
-    height: inherit;
-    width: inherit;
-    max-width: initial;
+    max-height: 90%;
+    max-width: 90%;
   }
 
   .hero__details {
