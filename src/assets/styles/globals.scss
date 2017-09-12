@@ -39,6 +39,7 @@
 --------------------------------------- */
 
 @import 'layout/footer';
+@import 'layout/grid';
 @import 'layout/header';
 @import 'layout/main';
 @import 'layout/site';
@@ -48,9 +49,3 @@
 --------------------------------------- */
 
 @import 'animations/fade';
-
-/* ------------------------------------
- SMALL SCREEN AND BASE STYLES
---------------------------------------- */
-
-@import 'screen';
