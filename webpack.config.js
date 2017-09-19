@@ -35,11 +35,9 @@ module.exports = {
         'exclude': /node_modules/
       },
       {
-        'test': /\.(sass|scss)$/,
-        'exclude': /node_modules/,
-        'use': ExtractTextPlugin.extract(
-          ['css', 'postcss', 'sass']
-        )
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        loader: 'style!css!sass!' + path.resolve('loaders/inject-global-scss')
       },
       {
         'test': /\.(ico|jpg|png|pdf)$/,
