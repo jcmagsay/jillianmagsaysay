@@ -5,7 +5,6 @@
  Converts to rems
 ------------------------------------------------------------------------ */
 
-
 @function rhythm($multiplier) {
   @return #{$multiplier * $RHYTHM_BASE / 10}rem;
 }
