@@ -5,6 +5,7 @@ import NotFound from 'pages/not-found/not-found';
 import Projects from 'pages/projects/projects';
 import Resume from 'pages/resume/resume';
 import Contact from 'pages/contact/contact';
+import Cms from 'pages/cms/cms';
 
 const navRoutes = [
   {
@@ -39,6 +40,11 @@ const otherRoutes = [
     'path': '/',
     'name': 'Home',
     'component': Home
+  },
+  {
+    'path': '/cms',
+    'name': 'CMS',
+    'component': Cms
   },
   {
     'path': '/*',

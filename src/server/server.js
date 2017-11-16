@@ -7,6 +7,7 @@ var port = Number(process.env.PORT || 3001);
 var dotenv = require('dotenv');
 var auth = require('http-auth');
 var compression = require('compression');
+var basicAuth = require('basic-auth');
 
 if (!process.env.NODE_ENV) {
   // Read .env to properly set `process.env`
@@ -44,6 +45,10 @@ app.get('*', function(req, res) {
   res.render('index', {
     'env': env
   });
+});
+
+app.get('/cms', function(req, res) {
+  alert('you need to be authenticated to view this page');
 });
 
 app.listen(port, function(err) {
