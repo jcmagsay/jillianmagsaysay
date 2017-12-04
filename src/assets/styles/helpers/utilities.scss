@@ -1,4 +1,4 @@
-@mixin isVisuallyHidden() {
+@mixin hidden() {
   border: 0;
   clip: rect(0 0 0 0);
   height: 0.1rem;
@@ -9,8 +9,8 @@
   width: 0.1rem;
 }
 
-.isVisuallyHidden {
-  @include isVisuallyHidden;
+.hidden {
+  @include hidden;
 }
 
 .spacer {

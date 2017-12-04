@@ -9,6 +9,8 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: 'body'
 });
 
+const SRC_PATH = path.resolve(__dirname, './src');
+
 module.exports = {
   'devtool': 'source-map',
   'entry': './src/index.js',
@@ -24,7 +26,7 @@ module.exports = {
         'exclude': [/node_modules/],
         'use': [{
           'loader': 'babel',
-          'options': { presets: ['es2015'] }
+          'options': { presets: ['es2015', 'react', 'stage-0'] }
         }]
       },
       {
@@ -53,16 +55,16 @@ module.exports = {
   },
   'resolve': {
     'alias': {
-      'media': path.resolve(__dirname, './src/assets/media'),
-      'styles': path.resolve(__dirname, './src/assets/styles'),
-      'client': path.resolve(__dirname, './src/client'),
-      'components': path.resolve(__dirname, './src/client/components'),
-      'helpers': path.resolve(__dirname, './src/client/helpers'),
-      'icons': path.resolve(__dirname, './src/client/icons'),
-      'landmarks': path.resolve(__dirname, './src/client/landmarks'),
-      'layout': path.resolve(__dirname, './src/client/layout'),
-      'pages': path.resolve(__dirname, './src/client/pages'),
-      'routes': path.resolve(__dirname, './src/routes')
+      'media': `${SRC_PATH}/assets/media`,
+      'styles': `${SRC_PATH}/assets/styles`,
+      'client': `${SRC_PATH}/client`,
+      'components': `${SRC_PATH}/client/components`,
+      'helpers': `${SRC_PATH}/client/helpers`,
+      'icons': `${SRC_PATH}/client/icons`,
+      'landmarks': `${SRC_PATH}/client/landmarks`,
+      'layout': `${SRC_PATH}/client/layout`,
+      'pages': `${SRC_PATH}/client/pages`,
+      'routes': `${SRC_PATH}/route`
     },
     'extensions': ['.js', '.json', '.jsx', '.scss', '.jpg', '.png', '.ico', '.ttf', '.pdf']
   },
