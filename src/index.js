@@ -22,5 +22,6 @@ import 'styles/app';
 /***** END -- MOVE TO DB DIR AND USE YARN SCRIPT TO RUN FILE *****/
 
 render(
-  <App />, document.getElementById('app')
+  <App />,
+  document.getElementById('app'),
 );

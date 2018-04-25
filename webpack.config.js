@@ -64,7 +64,7 @@ module.exports = {
       'landmarks': `${SRC_PATH}/client/landmarks`,
       'layout': `${SRC_PATH}/client/layout`,
       'pages': `${SRC_PATH}/client/pages`,
-      'routes': `${SRC_PATH}/route`
+      'routes': `${SRC_PATH}/routes`
     },
     'extensions': ['.js', '.json', '.jsx', '.scss', '.jpg', '.png', '.ico', '.ttf', '.pdf']
   },
