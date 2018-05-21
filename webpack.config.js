@@ -44,12 +44,7 @@ module.exports = {
       {
         'test': /\.(ico|jpg|png|pdf)$/,
         'exclude': /node_modules/,
-        'use': 'file?name=media/images/favicons/[name].[ext]'
-      },
-      {
-        'test': /\.(ico|jpg|png|pdf)$/,
-        'exclude': /node_modules/,
-        'use': 'file?name=media/images/signature/[name].[ext]'
+        'use': 'file?name=media/images/[name].[ext]'
       },
       {
         'test': /\.(ttf)$/,
