@@ -15,7 +15,6 @@ export default class Projects extends Component {
       {
         'actions': 'https://launchforth.io/',
         'description': `Crowd source focused industrial engineering platform.`,
-        'linkInvisible': true,
         'name': 'Launch Forth',
         'role': 'Tech Lead, Sr. Software Engineer'
       }
@@ -25,14 +24,12 @@ export default class Projects extends Component {
       {
         'actions': 'http://www.salonhaloboulder.com/',
         'description': `Local Boulder, Colorado Hair Salon`,
-        'linkInvisible': true,
         'name': 'Salon Halo',
         'role': 'Freelance -- Content Authoring, Design, and Engineering'
       },
       {
         'actions': 'https://rider.retul.com/',
         'description': `Customized Rider Portal for Cyclists based on true body measurement data.`,
-        'linkInvisible': true,
         'name': 'Retul Rider Portal',
         'role': 'Tech Lead, Front-End Engineering'
       },
