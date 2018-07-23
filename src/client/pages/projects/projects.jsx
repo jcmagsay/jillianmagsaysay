@@ -13,14 +13,29 @@ export default class Projects extends Component {
   generateData() {
     this.futureProjects = [
       {
-        'description': `Customized Rider Portal for Cyclists based on true body measurement data.`,
+        'actions': 'https://launchforth.io/',
+        'description': `Crowd source focused industrial engineering platform.`,
         'linkInvisible': true,
-        'name': 'Retul Rider Portal',
-        'role': 'Tech Lead, Front-End Engineering'
+        'name': 'Launch Forth',
+        'role': 'Tech Lead, Sr. Software Engineer'
       }
     ];
 
     this.pastProjects = [
+      {
+        'actions': 'http://www.salonhaloboulder.com/',
+        'description': `Local Boulder, Colorado Hair Salon`,
+        'linkInvisible': true,
+        'name': 'Salon Halo',
+        'role': 'Freelance -- Content Authoring, Design, and Engineering'
+      },
+      {
+        'actions': 'https://rider.retul.com/',
+        'description': `Customized Rider Portal for Cyclists based on true body measurement data.`,
+        'linkInvisible': true,
+        'name': 'Retul Rider Portal',
+        'role': 'Tech Lead, Front-End Engineering'
+      },
       {
         'description': 'Web app for Comcast customers to organize call flow systems.',
         'linkInvisible': true,
@@ -68,7 +83,7 @@ export default class Projects extends Component {
         heroTitle="Street Cred"
         heroSupportingTxt="Would buttercream be as good without the butter?"
       >
-        <Text type="display-sm" underlined>Upcoming Projects</Text>
+        <Text type="display-sm" underlined>Upcoming & Current Projects</Text>
         <section className="grid">
           {this.futureProjects.map((project, i) => {
             return(
