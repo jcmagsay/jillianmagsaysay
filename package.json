@@ -1,5 +1,5 @@
 {
-  "name": "react-webpack2-boilerplate",
+  "name": "jillianmagsaysay-personal-site",
   "version": "1.0.0",
   "description": "Jillian Magsaysay Personal Website",
   "main": "index.js",
@@ -14,9 +14,10 @@
     "type": "git",
     "url": "https://github.com/jcmagsay/jillianmagsaysay.git"
   },
+  "enginesStrict": true,
   "engines": {
-    "node": "6",
-    "npm": "3"
+    "node": ">= 10",
+    "npm": ">= 6"
   },
   "author": "Jill Magsaysay",
   "license": "ISC",
