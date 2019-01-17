@@ -1,6 +1,6 @@
 import 'styles/components/page';
 
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Hero from 'components/hero';
 
 export default class Page extends Component {

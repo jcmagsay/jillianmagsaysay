@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import ListItem from 'components/list-item';
 import Page from 'components/page';
 import Text from 'components/text';
