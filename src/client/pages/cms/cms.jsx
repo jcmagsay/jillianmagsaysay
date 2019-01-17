@@ -3,48 +3,51 @@ import Dropdown from 'components/dropdown';
 import Text from 'components/text';
 import Textfield from 'components/textfield';
 
-export default class Cms extends Component {
-  constructor () {
-    super();
+const getPages = () => {
+  return [
+    'home',
+    'about',
+    'projects',
+    'resume',
+    'ideas',
+    'contact'
+  ];
+};
 
-    this.pages = this.getPages();
-  }
+const submitForm = (e) => {
+  e.preventDefault();
+  // alert('future placeholder for submit form');
+};
 
-  setupHandlers() {
-    this.submitForm = this.submitForm.bind(this);
-  }
-
-  getPages() {
-    // TODO: update this to get from API
-    return ['home', 'about', 'projects', 'resume', 'ideas', 'contact'];
-  }
-
-  submitForm(e) {
-    e.preventDefault();
-    // alert('future placeholder for submit form');
-  }
-
-  render() {
-    return (
-      <form onSubmit={this.submitForm}>
-        <Text type="display-sm">Add entries</Text>
-        <Dropdown
-          collection={this.pages}
-          hash="page-dd"
-          label="Choose Page"
-        />
-        <Textfield
-          id="input-1"
-          label="Title"
-          type="text"
-        />
-        <Textfield
-          id="input-1"
-          label="Supporting Text"
-          type="text"
-        />
-        <button onClick={this.submitForm}>Submit</button>
-      </form>
-    );
-  }
+const Cms = () => {
+  // TODO: perhaps this can come dynamically from the routes. More scaleable.
+  const pages = getPages();
+  
+  return (
+    <form onSubmit={submitForm}>
+      <Text type="display-sm">Add entries</Text>
+      <Dropdown
+        collection={pages}
+        hash="page-dd"
+        label="Choose Page"
+      />
+      <Textfield
+        id="input-1"
+        label="Title"
+        type="text"
+      />
+      <Textfield
+        id="input-1"
+        label="Supporting Text"
+        type="text"
+      />
+      <input
+        type="button"
+        placeholder="Submit"
+        onClick={submitForm}
+      />
+    </form>
+  );
 }
+
+export default Cms;
