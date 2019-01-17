@@ -7,60 +7,46 @@ import Nav from 'layout/nav';
 import NavDrawer from 'layout/nav-drawer';
 import 'layout/favicons';
 
-export default class Main extends React.Component {
-  constructor(props) {
-    super(props);
+let navOpen = false;
 
-    this.state = {
-      'navOpen': false
-    };
+const toggleNav = () => {
+  navOpen = !navOpen;
+};
 
-    this.initBindings();
-  }
-
-  initBindings() {
-    this.toggleNav = this.toggleNav.bind(this);
-  }
-
-  toggleNav() {
-    this.setState({ 'navOpen': !this.state.navOpen });
-  }
-
-  render() {
-    return (
-      <Router>
-        <div className="site">
-          <header role="banner">
-            <Nav
-              isOpen={this.state.navOpen}
-              routes={routes}
-              toggleNav={this.toggleNav}
+const Main = () => (
+  <Router>
+    <div className="site">
+      <header role="banner">
+        <Nav
+          isOpen={navOpen}
+          routes={routes}
+          toggleNav={toggleNav}
+        />
+        <NavDrawer
+          isOpen={navOpen}
+          routes={routes}
+          toggleNav={toggleNav}
+        />
+      </header>
+      <main id="main" role="main">
+        <Switch>
+          {routes.all.map((route, i) =>
+            <Route
+              exact
+              key={`route-${i}`}
+              path={route.path}
+              render={props => {
+                return (
+                  <route.component {...props} />
+                )
+              }}
             />
-            <NavDrawer
-              isOpen={this.state.navOpen}
-              routes={routes}
-              toggleNav={this.toggleNav}
-            />
-          </header>
-          <main id="main" role="main">
-            <Switch>
-              {routes.all.map((route, i) =>
-                <Route
-                  exact
-                  key={`route-${i}`}
-                  path={route.path}
-                  render={props => {
-                    return (
-                      <route.component {...props} />
-                    )
-                  }}
-                />
-              )}
-            </Switch>
-          </main>
-          <Footer />
-        </div>
-      </Router>
-    );
-  }
-}
+          )}
+        </Switch>
+      </main>
+      <Footer />
+    </div>
+  </Router>
+);
+
+export default Main;
