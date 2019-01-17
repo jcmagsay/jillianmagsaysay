@@ -1,7 +1,7 @@
 import 'styles/components/text';
 
 import React, { Component } from 'react';
-import classNames from 'classnames';
+import cx from 'classcat';
 
 export default class Text extends Component {
   constructor () {
@@ -11,17 +11,17 @@ export default class Text extends Component {
   render() {
     const { align, children, className, color, tag, type, weight, underlined } = this.props;
     const TagVariant = tag || 'div';
-    const textClasses = classNames(
+    const textClasses = cx([
       'text',
       {
         [`text--${align}`]: align,
         [`text--${color}`]: color,
         [`text--${type}`]: type,
         [`text--${weight}`]: weight,
-        [`text--underlined`]: underlined
+        [`text--underlined`]: underlined,
       },
-      className
-    )
+      className,
+    ]);
 
     return (
       <TagVariant className={textClasses}>

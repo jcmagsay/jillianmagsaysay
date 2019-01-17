@@ -1,60 +1,62 @@
 import 'styles/components/hero';
 
 import React, { Component } from 'react';
-import classNames from 'classnames';
+import ClassCatNode from 'atoms/ClassCatNode';
 import Text from 'components/text';
 
-export default class Hero extends Component {
-  constructor () {
-    super();
+let animateText = false;
 
-    this.state = {
-      'animateText': false
-    };
-  }
+const Hero = (props) => {
+  const {
+    children,
+    image,
+    title,
+    supportingText,
+  } = props;
 
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        'animateText': true
-      });
-    }, 200);
-  }
+  return (
+    <section className="hero">
+      <div className="hero__avatar">
+        <ClassCatNode
+          as="img"
+          className={[
+            'hero__image',
+            'fadeIn',
+            {
+              'fadingIn': animateText,
+            },
+          ]}
+          src={image}
+        />
+      </div>
+      <div className="hero__details">
+        <Text
+          className={[
+            'fadeLeft',
+            {
+              'fadingLeft': animateText,
+            },
+          ]}
+          tag="h2"
+          type="display-xl"
+        >
+          {title}
+        </Text>
+        <Text
+          tag="h3"
+          type="display-sm"
+        >
+          {supportingText}
+        </Text>
+      </div>
+    </section>
+  );
+};
 
-  render() {
-    const { children, image, title, supportingText } = this.props;
+Hero.componentDidMount = () => {
+  setTimeout(() => {
+    animateText = true;
+  }, 200);
+};
 
-    const titleClasses = classNames(
-      'fadeLeft',
-      {
-        'fadingLeft': this.state.animateText
-      }
-    );
-    const imageClasses = classNames(
-      'hero__image',
-      'fadeIn',
-      {
-        'fadingIn': this.state.animateText
-      }
-    );
-
-    return (
-      <section className="hero">
-        <div className="hero__avatar">
-          <img className={imageClasses} src={image} />
-        </div>
-        <div className="hero__details">
-          <Text
-            className={titleClasses}
-            tag="h2"
-            type="display-xl"
-          >{title}</Text>
-          <Text
-            tag="h3"
-            type="display-sm"
-          >{supportingText}</Text>
-        </div>
-      </section>
-    );
-  }
-}
+export default Hero;
