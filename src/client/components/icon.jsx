@@ -1,20 +1,27 @@
 import React, { Component } from 'react';
 import Icons from 'helpers/enums/icons';
 
-export default class Icon extends Component {
-  constructor() {
-    super();
-  }
+const Icon = (props) => {
+  const {
+    children,
+    className,
+    type,
+    fill,
+    stroke,
+  } = props;
 
-  render() {
-    const { children, className, type, fill, stroke } = this.props;
-    const IconVariant = Icons[type];
-    return (
-      <i className={className}>
-        <IconVariant fill={fill} stroke={stroke}>
-          {children}
-        </IconVariant>
-      </i>
-    );
-  }
-}
+  const IconVariant = Icons[type];
+
+  return (
+    <i className={className}>
+      <IconVariant
+        fill={fill}
+        stroke={stroke}
+      >
+        {children}
+      </IconVariant>
+    </i>
+  );
+};
+
+export default Icon;
