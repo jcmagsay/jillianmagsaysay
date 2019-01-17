@@ -14,9 +14,19 @@ const Resume = () => {
       </Text>
       <div className="grid">
         <div className="grid__col">
-          <a href={require('media/documents/magsaysay_cv.pdf')} target="_blank">
-            <img width="50%" src={require('media/images/cv.png')} alt="Jill Resume" />
-          </a>
+          {/* TODO: Fix and update this to be full page */}
+          <object
+            data={require('media/documents/magsaysay_cv.pdf')}
+            type="application/pdf"
+            width="100%"
+            height="100%"
+          >
+            <a href={require('media/documents/magsaysay_cv.pdf')} target="_blank">
+              <p>
+                Your browser does not support PDFs.
+              </p>
+            </a>
+          </object>
         </div>
       </div>
     </Page>

@@ -12,10 +12,10 @@ const Ideas = () => (
     heroSupportingTxt="Knowledge is not power. It's only potential power. Action is power."
   >
     <Text type="headline">
-      {this.introduction}
+      {introduction}
     </Text>
     <Text type="headline">
-      {this.description}
+      {description}
     </Text>
     <Text type="subheading">
       Check back soon to view my recent experiments.
