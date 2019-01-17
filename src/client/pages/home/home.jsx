@@ -7,26 +7,26 @@ const listItems = [
     'avatar': 'account',
     'primaryContent': `Want to know more about me? While I'm a professional software engineer, I participate in many local activities in my community.`,
     'title': 'About',
-    'url': '/about'
+    'url': '/about',
   },
   {
     'avatar': 'briefcase',
     'primaryContent': `Interested in what professional projects I've worked on? Check out my past and upcoming projects.`,
     'title': 'Projects',
-    'url': '/projects'
+    'url': '/projects',
   },
   {
     'avatar': 'code',
     'primaryContent': 'Curious what my strengths are? I have experience writing enterprise software in several languages.',
     'title': 'Experience',
-    'url': '/resume'
+    'url': '/resume',
   },
   {
     'avatar': 'lightbulb',
     'primaryContent': `With ever-changing technology, I'm always looking for ways to explore new tech. My idea bucket is a way of transforming my creativity into experimental code solutions.`,
     'title': 'Idea Bucket',
-    'url': '/ideas'
-  }
+    'url': '/ideas',
+  },
 ];
 
 const renderHeroSupportingText = () => (
@@ -35,9 +35,11 @@ const renderHeroSupportingText = () => (
   </div>
 );
 
+const heroImage = require('media/images/professional-color.png');
+
 const Home = () => (
   <Page
-    heroImage={require('media/images/professional-color.png')}
+    heroImage={heroImage}
     heroTitle="Hi, I'm Jill"
     heroSupportingTxt={renderHeroSupportingText()}
   >
