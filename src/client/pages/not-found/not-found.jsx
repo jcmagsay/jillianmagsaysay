@@ -1,13 +1,7 @@
 import React, {Component} from 'react';
 
-export default class NotFound extends Component {
-  constructor () {
-    super();
-  }
+const NotFound = () => (
+  <div>Not Found</div>
+);
 
-  render() {
-    return (
-      <div>Not Found</div>
-    );
-  }
-}
+export default NotFound;
