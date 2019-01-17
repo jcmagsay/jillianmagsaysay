@@ -1,65 +1,63 @@
 import React, { Component } from 'react';
 import Textfield from 'components/textfield';
+import ClassCatNode from 'atoms/ClassCatNode';
 
-export default class Dropdown extends Component {
-  constructor () {
-    super();
 
-    this.state = {
-      open: false,
-      value: ''
-    };
+let open = false;
+let value = '';
 
-    this.setupHandlers();
-  }
+const toggleOpen = () => {
+  open = !open;
+};
 
-  setupHandlers() {
-    this.toggleOpen = this.toggleOpen.bind(this);
-    this.updateValue = this.updateValue.bind(this);
-  }
+const updateValue = (e) => {
+  this.toggleOpen();
+  value = e.target.textContent
+};
 
-  toggleOpen() {
-    this.setState({
-      open: !this.state.open
-    })
-  }
+const renderList = (hash, data, i) => {
+  return (
+    <li
+      key={`${hash}-li-${i}`}
+      className="dropdown__list-item"
+    >
+      <button onClick={updateValue}>
+        {data}
+      </button>
+    </li>
+  )
+};
 
-  updateValue(e) {
-    this.toggleOpen();
-    this.setState({
-      value: e.target.textContent
-    });
-  }
 
-  _renderList(data, i) {
-    return (
-      <li
-        key={`${this.props.hash}-li-${i}`}
-        className="dropdown__list-item"
+const Dropdown = (props) => {
+  const {
+    collection,
+    hash,
+    label,
+  } = props;
+
+  const openClass = !open ? 'hidden' : '';
+
+  return(
+    <div className="dropdown">
+      <button type="text" onClick={toggleOpen}>
+        <Textfield
+          label={label}
+          value={value}
+        />
+      </button>
+      <ClassCatNode
+        className={[
+          'dropdown__list',
+          {
+            hidden: open,
+          },
+        ]}
       >
-        <button onClick={this.updateValue}>
-          {data}
-        </button>
-      </li>
-    )
-  }
-
-  render() {
-    const openClass = !this.state.open ? 'hidden': '';
-    const dropdownListClasses = ['dropdown__list', openClass].join(' ')
-
-    return(
-      <div className="dropdown">
-        <button type="text" onClick={this.toggleOpen}>
-          <Textfield
-            label={this.props.label}
-            value={this.state.value}
-          />
-        </button>
-        <ul className={dropdownListClasses}>
-          {this.props.collection.map((item, i) => this._renderList(item, i))}
-        </ul>
-      </div>
-    );
-  }
+        {collection.map((item, i) => renderList(hash, item, i))}
+      </ClassCatNode>
+    </div>
+  );
 }
+
+export default Dropdown;
