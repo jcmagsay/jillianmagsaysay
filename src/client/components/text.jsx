@@ -1,6 +1,6 @@
 import 'styles/components/text';
 
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import classNames from 'classnames';
 
 export default class Text extends Component {

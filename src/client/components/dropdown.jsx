@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Textfield from 'components/textfield';
 
 export default class Dropdown extends Component {

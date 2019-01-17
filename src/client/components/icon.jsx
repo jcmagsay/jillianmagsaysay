@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Icons from 'helpers/enums/icons';
 
 export default class Icon extends Component {

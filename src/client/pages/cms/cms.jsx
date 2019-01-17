@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Dropdown from 'components/dropdown';
 import Text from 'components/text';
 import Textfield from 'components/textfield';

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Card from 'components/card';
 import Page from 'components/page';
 import Text from 'components/text';

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Page from 'components/page';
 import Text from 'components/text';
 

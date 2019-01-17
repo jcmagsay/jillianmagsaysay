@@ -1,6 +1,6 @@
 import 'styles/components/list-item';
 
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import Icon from 'components/icon';
 import Text from 'components/text';

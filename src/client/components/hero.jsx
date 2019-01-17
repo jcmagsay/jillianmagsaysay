@@ -1,6 +1,6 @@
 import 'styles/components/hero';
 
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import classNames from 'classnames';
 import Text from 'components/text';
 
