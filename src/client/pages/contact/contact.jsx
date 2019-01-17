@@ -7,7 +7,7 @@ const listItems = [
   {
     'avatar': 'building',
     'primaryContent': `Looking for a Senior Software Engineer at your company?`,
-    'title': 'Employer'
+    'title': 'Employer',
   },
   {
     'avatar': 'glasses',
@@ -17,14 +17,16 @@ const listItems = [
   {
     'avatar': 'partner',
     'primaryContent': 'Need a Front-End specialist to collaborate on a project?',
-    'title': 'Partner'
-  }
+    'title': 'Partner',
+  },
 ];
+
+const heroImage = require('media/images/chomps.png');
 
 const Contact = () => {
   return (
     <Page
-      heroImage={require('media/images/chomps.png')}
+      heroImage={heroImage}
       heroTitle="Contact"
       heroSupportingTxt="Have a bone to pick?"
     >
