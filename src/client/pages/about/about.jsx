@@ -3,7 +3,7 @@ import ListItem from 'components/list-item';
 import Page from 'components/page';
 import Text from 'components/text';
 
-const data = new Object({
+const data = {
   professionalData: [
     {
       'avatar': 'keyboard',
@@ -33,7 +33,8 @@ const data = new Object({
       'title': 'Homebrewer',
     },
   ],
-});
+};
+
 const heroImage = require('media/images/beer-enthusiast.png');
 
 const About = () => (
