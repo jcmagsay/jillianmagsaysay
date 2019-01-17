@@ -33,7 +33,7 @@ const Icons = {
   'partner': IconPartner,
   'thumbs-up': IconThumbsUp,
   'twitter': IconTwitter,
-  'x': IconX
+  'x': IconX,
 };
 
 export default Icons;
