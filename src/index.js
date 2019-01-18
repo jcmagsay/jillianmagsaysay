@@ -1,7 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import App from 'Scripts/main';
-// import routes from 'Routes/routes';
+import routes from 'Routes/routes';
 
 // STYLES
 import 'Styles/base/fonts';
