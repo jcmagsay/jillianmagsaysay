@@ -1,11 +1,11 @@
 import React from 'react';
 import {render} from 'react-dom';
-import App from 'client/main';
-import routes from 'routes/routes';
+import App from 'Scripts/main';
+// import routes from 'Routes/routes';
 
 // STYLES
-import 'styles/base/fonts';
-import 'styles/app';
+import 'Styles/base/fonts';
+import 'Styles/app';
 
 /***** BEGIN -- MOVE TO DB DIR AND USE YARN SCRIPT TO RUN FILE *****/
 // // DATABASE
