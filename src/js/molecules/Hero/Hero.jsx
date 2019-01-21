@@ -1,18 +1,28 @@
 import './Hero.scss';
 
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+
 import ClassCatNode from 'Atoms/ClassCatNode/ClassCatNode';
 import Text from 'Atoms/Text/Text';
 
-let animateText = false;
+import {
+  uiActions,
+  uiSelectors,
+} from 'Ducks/ui';
+
 
 const Hero = (props) => {
   const {
+    animate,
+    animateHero,
     children,
     image,
     title,
     supportingText,
   } = props;
+
+  setTimeout(() => animateHero(true), 200);
 
   return (
     <section className="hero">
@@ -23,7 +33,7 @@ const Hero = (props) => {
             'hero__image',
             'fadeIn',
             {
-              'fadingIn': animateText,
+              'fadingIn': animate,
             },
           ]}
           src={image}
@@ -34,7 +44,7 @@ const Hero = (props) => {
           className={[
             'fadeLeft',
             {
-              'fadingLeft': animateText,
+              'fadingLeft': animate,
             },
           ]}
           tag="h2"
@@ -53,10 +63,21 @@ const Hero = (props) => {
   );
 };
 
-Hero.componentDidMount = () => {
-  setTimeout(() => {
-    animateText = true;
-  }, 200);
+const mapStateToProps = state => ({
+  animate: uiSelectors.selectorHeroAnimate(state),
+});
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return ({
+    animateHero(animate) {
+      dispatch(uiActions.animateHero({
+        animate,
+      }));
+    },
+  });
 };
 
-export default Hero;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Hero);

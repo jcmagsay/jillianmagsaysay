@@ -13,9 +13,26 @@ const navReducer = (state, action) => {
     default:
       return { isOpen: false };
   }
+};
+
+
+const heroReducer = (state, action) => {
+  const {
+    payload,
+    type,
+  } = action;
+
+  switch (type) {
+    case types.HERO_ANIMATE:
+      return payload;
+    default:
+      return { animate: false };
+  }
 }
 
+
 const uiReducers = combineReducers({
+  hero: heroReducer,
   nav: navReducer,
 });
 
