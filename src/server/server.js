@@ -12,16 +12,16 @@ var basicAuth = require('basic-auth');
 if (!process.env.NODE_ENV) {
   // Read .env to properly set `process.env`
   dotenv.config({
-    'path': './.env'
+    'path': './.env',
   });
 }
 
 var env = {
   'development': process.env.NODE_ENV === 'development',
-  'production': process.env.NODE_ENV === 'production'
+  'production': process.env.NODE_ENV === 'production',
 };
 
-app.use(express.static('public'));
+app.use(express.static(__dirname));
 app.set('views', './src/server/views');
 app.set('view engine', 'ejs');
 app.disable('x-powered-by');
@@ -34,7 +34,7 @@ if (process.env.IS_PASSWORD_PROTECTED === 'true') {
   const envUser = process.env.ENV_USER;
   const envPassword = process.env.ENV_PASSWORD;
   const basic = auth.basic({
-    'realm': 'Protected'
+    'realm': 'Protected',
   }, (username, password, callback) => {
     callback(username === envUser && password === envPassword);
   });
@@ -42,9 +42,7 @@ if (process.env.IS_PASSWORD_PROTECTED === 'true') {
 }
 
 app.get('*', function(req, res) {
-  res.render('index', {
-    'env': env
-  });
+  res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
 app.get('/cms', function(req, res) {
