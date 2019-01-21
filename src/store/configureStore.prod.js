@@ -8,7 +8,7 @@ import reducers from 'Reducers/index';
 
 // const loggerMiddleware = logger(); // initialize logger
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const configureStoreProd = createStore(
+const configureStoreDev = createStore(
   reducers,
   /* preloadedState, */
   composeEnhancers(
@@ -16,4 +16,4 @@ const configureStoreProd = createStore(
   ),
 );
 
-export default {configureStoreProd};
+export default {configureStoreDev};
