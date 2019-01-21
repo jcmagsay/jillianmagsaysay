@@ -31,7 +31,7 @@ const NavDrawer = (props) => {
         <NavLink
           exact
           className="nav-drawer__logo"
-          onClick={toggleNav}
+          onClick={() => toggleNav(!isOpen)}
           to="/"
         >
           <img src={logo} height="100" />
@@ -48,7 +48,7 @@ const NavDrawer = (props) => {
                 exact
                 className="nav-drawer__link"
                 activeClassName="nav-drawer__link--active"
-                onClick={toggleNav}
+                onClick={() => toggleNav(!isOpen)}
                 to={route.path}
               >
                 <Text
@@ -69,7 +69,7 @@ const NavDrawer = (props) => {
             'nav-drawer__close--active': isOpen,
           },
         ]}
-        onClick={toggleNav}
+        onClick={() => toggleNav(!isOpen)}
       >
         <Icon type="x" />
       </ClassCatNode>

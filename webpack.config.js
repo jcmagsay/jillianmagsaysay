@@ -13,6 +13,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 const SRC_PATH = path.resolve(__dirname, 'src');
 
 module.exports = {
+  'mode': process.env.NODE_ENV || 'development',
   'resolve': {
     'alias': {
       Scripts: path.resolve(__dirname, 'src/js'),
@@ -22,7 +23,10 @@ module.exports = {
       Helpers: path.resolve(__dirname, 'src/js/helpers'),
       Environment: path.resolve(__dirname, 'src/js/environment'),
       Ecosystems: path.resolve(__dirname, 'src/js/ecosystems'),
+      Reducers: path.resolve(__dirname, 'src/reducers'),
+      Ducks: path.resolve(__dirname, 'src/ducks'),
       Routes: path.resolve(__dirname, 'src/routes'),
+      Store: path.resolve(__dirname, 'src/store'),
       Styles: path.resolve(__dirname, 'src/assets/styles'),
     },
     'extensions': [

@@ -1,0 +1,7 @@
+const HERO_ANIMATE = 'UI/HERO_ANIMATE';
+const NAV_TOGGLE = 'UI/NAV_TOGGLE';
+
+export default {
+  HERO_ANIMATE,
+  NAV_TOGGLE,
+};

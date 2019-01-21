@@ -52,7 +52,7 @@ const Nav = (props) => {
           },
         ]}
       >
-        <button onClick={toggleNav}>
+        <button onClick={() => toggleNav(!isOpen)}>
           <Icon type="menu" />
         </button>
       </ClassCatNode>
