@@ -4,7 +4,7 @@
   "description": "Jillian Magsaysay Personal Website",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p",
+    "build": "webpack --config webpack.config.js",
     "heroku-postbuild": "npm run build",
     "start:dev": "webpack-dev-server --port 8080 --hot --host 0.0.0.0",
     "start": "node src/server/server.js",
