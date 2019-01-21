@@ -7,3 +7,5 @@ assets.json
 yarn.lock
 public/assets/
 public/
+package-lock.json
+.env

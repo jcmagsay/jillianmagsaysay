@@ -1,7 +1,13 @@
 import React from 'react';
 import {render} from 'react-dom';
+import { createStore, applyMiddleware, compose } from 'redux'
+import { Provider } from 'react-redux'
+import createSagaMiddleware from 'redux-saga'
+
 import App from 'Scripts/main';
 import routes from 'Routes/routes';
+// import configureStore from 'Store/configureStore';
+import reducers from 'Reducers/index';
 
 // STYLES
 import 'Styles/base/fonts';
@@ -21,7 +27,27 @@ import 'Styles/app';
 // });
 /***** END -- MOVE TO DB DIR AND USE YARN SCRIPT TO RUN FILE *****/
 
+const composeEnhancers =
+  typeof window === 'object' &&
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+      // Specify extension’s options like name, actionsBlacklist, actionsCreators, serialize...
+    }) : compose;
+
+const sagaMiddleware = createSagaMiddleware();
+
+const enhancer = composeEnhancers(
+  applyMiddleware(sagaMiddleware),
+);
+
+const store = createStore(
+  reducers,
+  enhancer,
+);
+
 render(
-  <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('app'),
 );
