@@ -6,3 +6,4 @@ dist
 assets.json
 package-lock.json
 .env
+public/
