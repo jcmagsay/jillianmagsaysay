@@ -49,7 +49,7 @@ module.exports = {
   'devtool': 'source-map',
   'entry': './src/index.js',
   'output': {
-    'path': path.resolve('public/assets'),
+    'path': path.resolve(__dirname, 'public/assets'),
     'publicPath': process.env.NODE_ENV === 'production' ? '/assets/' : '/',
     'filename': 'bundle.js',
   },
