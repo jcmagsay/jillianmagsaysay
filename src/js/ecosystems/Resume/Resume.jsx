@@ -3,7 +3,7 @@ import Page from 'Environment/Page/Page';
 import Text from 'Atoms/Text/Text';
 
 const heroImage = require('Media/images/resume.png');
-const resumeDocument = require('Media/documents/magsaysay_cv.pdf');
+const resumeDocument = require('Media/images/magsaysay_cv.pdf');
 
 const Resume = () => {
   return (

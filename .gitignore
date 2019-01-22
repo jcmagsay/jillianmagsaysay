@@ -4,6 +4,5 @@ npm-debug.log
 coverage/
 dist
 assets.json
-yarn.lock
 package-lock.json
 .env
