@@ -26,7 +26,9 @@ const heroReducer = (state, action) => {
     case types.HERO_ANIMATE:
       return payload;
     default:
-      return { animate: false };
+      return state ? state : {
+        animate: false,
+      };
   }
 }
 

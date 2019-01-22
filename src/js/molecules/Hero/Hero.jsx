@@ -1,6 +1,6 @@
 import './Hero.scss';
 
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import { connect } from 'react-redux'
 
 import ClassCatNode from 'Atoms/ClassCatNode/ClassCatNode';
@@ -18,11 +18,16 @@ const Hero = (props) => {
     animateHero,
     children,
     image,
+    pageLoaded,
     title,
     supportingText,
   } = props;
 
-  setTimeout(() => animateHero(true), 200);
+  useEffect(() => {
+    console.log({animate})
+    setTimeout(() => animateHero(true), 200);
+  }, [pageLoaded]);
+
 
   return (
     <section className="hero">
@@ -65,6 +70,7 @@ const Hero = (props) => {
 
 const mapStateToProps = state => ({
   animate: uiSelectors.selectorHeroAnimate(state),
+  pageLoaded: false,
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => {
