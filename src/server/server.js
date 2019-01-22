@@ -21,7 +21,7 @@ var env = {
   'production': process.env.NODE_ENV === 'production',
 };
 
-app.use(express.static(__dirname));
+app.use(express.static('public'));
 app.set('views', './src/server/views');
 app.set('view engine', 'ejs');
 app.disable('x-powered-by');
@@ -42,7 +42,9 @@ if (process.env.IS_PASSWORD_PROTECTED === 'true') {
 }
 
 app.get('*', function(req, res) {
-  res.sendFile(path.resolve(__dirname, 'index.html'));
+  res.render('index', {
+    'env': env,
+  });
 });
 
 app.get('/cms', function(req, res) {
