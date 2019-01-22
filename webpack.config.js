@@ -79,12 +79,12 @@ module.exports = {
       {
         'test': /\.(ico|jpg|png|pdf)$/,
         'exclude': /node_modules/,
-        'use': 'file?name=media/images/[name].[ext]',
+        'use': 'file?name=assets/media/images/[name].[ext]',
       },
       {
         'test': /\.(ttf)$/,
         'exclude': /node_modules/,
-        'use': 'file?name=media/fonts/[name].[ext]',
+        'use': 'file?name=assets/media/fonts/[name].[ext]',
       },
     ],
   },
