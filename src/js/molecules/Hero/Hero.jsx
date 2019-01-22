@@ -24,7 +24,6 @@ const Hero = (props) => {
   } = props;
 
   useEffect(() => {
-    console.log({animate})
     setTimeout(() => animateHero(true), 200);
   }, [pageLoaded]);
 
