@@ -41,17 +41,19 @@ if (process.env.IS_PASSWORD_PROTECTED === 'true') {
   app.use(auth.connect(basic));
 }
 
-app.get('*', function(req, res) {
+app.get('*', function (req, res) {
+  info('Listening on port: ', { req, res });
+
   res.render('index', {
     'env': env,
   });
 });
 
-app.get('/cms', function(req, res) {
-  alert('you need to be authenticated to view this page');
+app.get('/cms', function (req, res) {
+  error('you need to be authenticated to view this page');
 });
 
-app.listen(port, function(err) {
+app.listen(port, function (err) {
   if (err) {
     console.log(err);
   }

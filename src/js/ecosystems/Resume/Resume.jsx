@@ -13,7 +13,13 @@ const Resume = () => {
       heroSupportingTxt="Life experience is what makes us who we are"
     >
       <Text type="headline" align="centered">
-        ***Click to download***
+        <a
+          download
+          href={resumeDocument}
+          target="_blank"
+        >
+          ***Click to download***
+        </a>
       </Text>
       <div className="grid">
         <div className="grid__col">

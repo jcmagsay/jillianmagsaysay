@@ -2,8 +2,23 @@
  APP STYLES
 --------------------------------------- */
 
-// THESE MUST BE FIRST IN THIS FILE
 @import 'base/reset';
+
+/* ------------------------------------
+ FUNCTIONS STYLES
+--------------------------------------- */
+@import 'functions/breakpoints';
+
+/* ------------------------------------
+ GLOBALS
+ --------------------------------------- */
+
+@import 'globals/colors';
+@import 'globals/dp';
+@import 'globals/fonts';
+@import 'globals/resolutions';
+@import 'globals/rhythms';
+@import 'globals/variables';
 
 /* ------------------------------------
  HELPER STYLES

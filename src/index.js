@@ -1,5 +1,5 @@
 import React from 'react';
-import {render} from 'react-dom';
+import { render } from 'react-dom';
 import { createStore, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
 import createSagaMiddleware from 'redux-saga'
@@ -11,7 +11,7 @@ import reducers from 'Reducers/index';
 
 // STYLES
 import 'Styles/base/fonts';
-import 'Styles/app';
+import './assets/styles/app.scss';
 
 /***** BEGIN -- MOVE TO DB DIR AND USE YARN SCRIPT TO RUN FILE *****/
 // // DATABASE
@@ -29,7 +29,7 @@ import 'Styles/app';
 
 const composeEnhancers =
   typeof window === 'object' &&
-  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
       // Specify extension’s options like name, actionsBlacklist, actionsCreators, serialize...
     }) : compose;
