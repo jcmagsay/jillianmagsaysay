@@ -42,18 +42,18 @@ if (process.env.IS_PASSWORD_PROTECTED === 'true') {
 }
 
 app.get('*', function (req, res) {
-  info('Listening on port: ', { req, res });
-
   res.render('index', {
     'env': env,
   });
 });
 
 app.get('/cms', function (req, res) {
-  error('you need to be authenticated to view this page');
+  console.error('you need to be authenticated to view this page');
 });
 
 app.listen(port, function (err) {
+  console.info(`Hooray! Listening on port: ${port}`);
+
   if (err) {
     console.log(err);
   }
